@@ -1,0 +1,152 @@
+[
+  {
+    "id": "missed_medication",
+    "title": "The Missed Medication",
+    "lesson": "A hypertensive patient's BP spikes; the anamnesis reveals he stopped his ACE inhibitor due to a persistent cough \u2014 a side effect not flagged in the EHR.",
+    "expected_urgency": "Urgent",
+    "patient_id": "PT-001",
+    "alert": {
+      "alert_id": "ALERT-PT-001",
+      "patient_id": "PT-001",
+      "timestamp": "2026-06-01T08:00:00",
+      "device_type": "Omron BP cuff",
+      "reading": {
+        "vital_type": "blood_pressure",
+        "value": 178.5,
+        "value_secondary": 99.9,
+        "unit": "mmHg"
+      },
+      "device_alert_category": "BP_HIGH",
+      "baseline_value": 126.0,
+      "thresholds": {
+        "vital_type": "blood_pressure",
+        "low": 90.0,
+        "high": 140.0,
+        "unit": "mmHg"
+      },
+      "notes": "Sustained elevation over multiple consecutive morning readings."
+    },
+    "alert_display": "178.5/99.9 mmHg",
+    "alert_category": "BP_HIGH"
+  },
+  {
+    "id": "false_alarm",
+    "title": "The False Alarm",
+    "lesson": "A diabetic patient's glucose reading triggers an alert, but the anamnesis records a planned dietary change and a recent medication adjustment \u2014 the alert is contextually benign.",
+    "expected_urgency": "Routine",
+    "patient_id": "PT-002",
+    "alert": {
+      "alert_id": "ALERT-PT-002",
+      "patient_id": "PT-002",
+      "timestamp": "2026-06-01T08:00:00",
+      "device_type": "Contour glucometer",
+      "reading": {
+        "vital_type": "blood_glucose",
+        "value": 247.0,
+        "value_secondary": null,
+        "unit": "mg/dL"
+      },
+      "device_alert_category": "GLUCOSE_HIGH",
+      "baseline_value": 140.0,
+      "thresholds": {
+        "vital_type": "blood_glucose",
+        "low": 70.0,
+        "high": 180.0,
+        "unit": "mg/dL"
+      },
+      "notes": "Single fasting reading; prior readings within range."
+    },
+    "alert_display": "247 mg/dL",
+    "alert_category": "GLUCOSE_HIGH"
+  },
+  {
+    "id": "silent_deterioration",
+    "title": "The Silent Deterioration",
+    "lesson": "A heart-failure patient's weight rises gradually over two weeks; each reading is within threshold, but the trend plus reported ankle swelling suggests fluid retention.",
+    "expected_urgency": "Urgent",
+    "patient_id": "PT-003",
+    "alert": {
+      "alert_id": "ALERT-PT-003",
+      "patient_id": "PT-003",
+      "timestamp": "2026-06-01T08:00:00",
+      "device_type": "Withings scale",
+      "reading": {
+        "vital_type": "weight",
+        "value": 85.8,
+        "value_secondary": null,
+        "unit": "kg"
+      },
+      "device_alert_category": "WEIGHT_GAIN_TREND",
+      "baseline_value": 81.5,
+      "thresholds": {
+        "vital_type": "weight",
+        "low": 70.0,
+        "high": 88.0,
+        "unit": "kg"
+      },
+      "notes": "Gradual ~4 kg gain over 14 days; no single reading above the absolute threshold, but the upward trend triggered a trend-based alert."
+    },
+    "alert_display": "85.8 kg",
+    "alert_category": "WEIGHT_GAIN_TREND"
+  },
+  {
+    "id": "incomplete_record",
+    "title": "The Incomplete Record",
+    "lesson": "A patient transfers from another system; the EHR is sparse, so the system must rely heavily on anamnesis data while clearly flagging the gaps.",
+    "expected_urgency": "Routine",
+    "patient_id": "PT-004",
+    "alert": {
+      "alert_id": "ALERT-PT-004",
+      "patient_id": "PT-004",
+      "timestamp": "2026-06-01T08:00:00",
+      "device_type": "loaner BP cuff",
+      "reading": {
+        "vital_type": "blood_pressure",
+        "value": 165.0,
+        "value_secondary": 94.9,
+        "unit": "mmHg"
+      },
+      "device_alert_category": "BP_HIGH",
+      "baseline_value": null,
+      "thresholds": {
+        "vital_type": "blood_pressure",
+        "low": 90.0,
+        "high": 140.0,
+        "unit": "mmHg"
+      },
+      "notes": "Newly transferred patient; no established baseline on file."
+    },
+    "alert_display": "165/94.9 mmHg",
+    "alert_category": "BP_HIGH"
+  },
+  {
+    "id": "conflicting_data",
+    "title": "The Conflicting Data",
+    "lesson": "The patient reports full medication adherence, but lab results show sub-therapeutic drug levels \u2014 the system must flag the discrepancy without making accusations.",
+    "expected_urgency": "Urgent",
+    "patient_id": "PT-005",
+    "alert": {
+      "alert_id": "ALERT-PT-005",
+      "patient_id": "PT-005",
+      "timestamp": "2026-06-01T08:00:00",
+      "device_type": "Apple Watch",
+      "reading": {
+        "vital_type": "heart_rate",
+        "value": 124.0,
+        "value_secondary": null,
+        "unit": "bpm"
+      },
+      "device_alert_category": "HR_HIGH",
+      "baseline_value": 76.0,
+      "thresholds": {
+        "vital_type": "heart_rate",
+        "low": 50.0,
+        "high": 110.0,
+        "unit": "bpm"
+      },
+      "notes": "Recent episodes of palpitations with heart rate up to 132 bpm."
+    },
+    "alert_display": "124 bpm",
+    "alert_category": "HR_HIGH"
+  }
+]

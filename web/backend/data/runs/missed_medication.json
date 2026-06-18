@@ -1,0 +1,261 @@
+{
+  "alert_id": "ALERT-PT-001",
+  "patient_id": "PT-001",
+  "final_urgency": "Urgent",
+  "escalated": false,
+  "deterministic_severity": {
+    "severity": "urgent",
+    "urgency": "Urgent",
+    "rationale": "Systolic 178.5 mmHg (>=200 critical, >=170 urgent, > threshold routine)."
+  },
+  "errors": [],
+  "triage": {
+    "patient_id": "PT-001",
+    "urgency": "Urgent",
+    "clinical_question": "What is causing this patient's sustained high blood pressure, and are there any reversible factors contributing to it?",
+    "reasoning": "The blood pressure reading is significantly above both the threshold and the baseline, and it is noted as sustained over multiple readings, indicating a need for same-day clinical review; however, there are no acute symptoms reported.",
+    "requires_immediate_escalation": false,
+    "ehr_query": {
+      "focus_terms": [
+        "hypertension",
+        "antihypertensive medications",
+        "recent blood pressure",
+        "kidney function"
+      ],
+      "rationale": "These terms are relevant to understanding the patient's blood pressure management and potential underlying causes."
+    },
+    "anamnesis_query": {
+      "focus_terms": [
+        "medication adherence",
+        "recent symptoms",
+        "diet or lifestyle changes",
+        "stress levels"
+      ],
+      "rationale": "These topics are important to assess for any factors that may have contributed to the recent elevation in blood pressure."
+    }
+  },
+  "ehr_context": {
+    "patient_id": "PT-001",
+    "problem_list": [
+      {
+        "condition": "Essential hypertension",
+        "icd10_code": "I10",
+        "status": "active",
+        "onset_date": "2016-04-10",
+        "source_ref": "EHR:PT-001/problem_list"
+      }
+    ],
+    "medications": [
+      {
+        "name": "Lisinopril",
+        "dose": "10 mg",
+        "frequency": "once daily",
+        "status": "active",
+        "source_ref": "EHR:PT-001/medications"
+      }
+    ],
+    "lab_results": [
+      {
+        "test_name": "Creatinine",
+        "value": "1.0 mg/dL",
+        "unit": null,
+        "reference_range": "0.7-1.3",
+        "date": "2026-03-15",
+        "trend": null,
+        "flag": "normal",
+        "source_ref": "EHR:PT-001/labs"
+      }
+    ],
+    "visit_notes": [
+      {
+        "date": "2026-03-15",
+        "excerpt": "68M with HTN and hyperlipidemia, well controlled on lisinopril 10mg and atorvastatin. Home BP log averaging 126/80. Continue current regimen. No complaints today. RTC 6 months.",
+        "source_ref": "EHR:PT-001/visit_note(2026-03-15)"
+      }
+    ],
+    "retrieval_confidence": 0.8,
+    "missing_data_flags": [
+      "No recent blood pressure readings indicating sustained high blood pressure found; only an average of 126/80 was noted.",
+      "No additional antihypertensive medications or reversible factors contributing to hypertension were identified."
+    ],
+    "source_documents": [
+      "EHR:PT-001/problem_list",
+      "EHR:PT-001/visit_note(2026-03-15)",
+      "EHR:PT-001/medications",
+      "EHR:PT-001/labs"
+    ]
+  },
+  "anamnesis_summary": {
+    "patient_id": "PT-001",
+    "reported_symptoms": [
+      {
+        "symptom": "persistent dry cough",
+        "onset": "~3 weeks ago",
+        "progression": "cough has persisted, with some improvement noted",
+        "patient_words": "an annoying dry tickle in my throat",
+        "clinical_interpretation": "dry cough, possibly ACE-inhibitor related",
+        "source_ref": "Anamnesis:PT-001/hpi"
+      },
+      {
+        "symptom": "high blood pressure",
+        "onset": "last two weeks",
+        "progression": "blood pressure readings have been 'creeping up'",
+        "patient_words": "my home blood pressure has been 'creeping up' over the last two weeks",
+        "clinical_interpretation": "sustained high blood pressure readings, likely related to medication non-adherence",
+        "source_ref": "Anamnesis:PT-001/chief_complaint"
+      }
+    ],
+    "medication_adherence": "partial",
+    "adherence_detail": "stopped lisinopril ~2 weeks ago due to a dry cough; continues atorvastatin",
+    "lifestyle_factors": [
+      "adds salt to most meals",
+      "walks dog 20 min/day",
+      "1-2 beers/week"
+    ],
+    "family_history": [
+      "Father: stroke at 70",
+      "Mother: hypertension"
+    ],
+    "patient_concerns": [
+      "Worried the cough means something serious.",
+      "Wants to know if there is a BP medicine that won't cause a cough."
+    ],
+    "sensitive_flags": [],
+    "missing_data_flags": [],
+    "source_documents": [
+      "anamnesis/PT-001"
+    ]
+  },
+  "brief": {
+    "patient_id": "PT-001",
+    "generated_at": "2026-06-17T12:13:45.710345",
+    "alert_summary": "Sustained high blood pressure of 178.5/99.9 mmHg, significantly elevated from baseline of 126.0 mmHg, indicating urgent concern.",
+    "urgency": "Urgent",
+    "patient_snapshot": "68-year-old male with essential hypertension and hyperlipidemia, currently on lisinopril 10 mg daily and atorvastatin.",
+    "contextual_analysis": [
+      {
+        "statement": "The patient's blood pressure has been rising steadily, averaging 138.1 mmHg over 30 readings, with a notable increase from 131.0 to 178.5 mmHg, indicating a concerning trend of worsening hypertension.",
+        "sources": [
+          "RPM trend"
+        ]
+      },
+      {
+        "statement": "The patient reports stopping lisinopril approximately two weeks ago due to a persistent dry cough, which aligns with the recent spike in blood pressure readings.",
+        "sources": [
+          "Anamnesis:PT-001/hpi"
+        ]
+      },
+      {
+        "statement": "The patient's self-reported adherence issues and dietary habits, including adding salt to meals, may also contribute to the elevated blood pressure.",
+        "sources": [
+          "Anamnesis:PT-001/chief_complaint"
+        ]
+      }
+    ],
+    "risk_assessment": [
+      {
+        "statement": "The sustained high blood pressure poses a risk for cardiovascular events, particularly given the patient's family history of stroke and hypertension.",
+        "sources": [
+          "EHR:PT-001/problem_list"
+        ]
+      },
+      {
+        "statement": "The dry cough may indicate an adverse reaction to lisinopril, necessitating a review of alternative antihypertensive medications that do not cause cough.",
+        "sources": [
+          "Anamnesis:PT-001/hpi"
+        ]
+      }
+    ],
+    "recommended_actions": [
+      {
+        "action": "Evaluate alternative antihypertensive medications that do not cause cough, such as ARBs, and consider reinitiating treatment for hypertension.",
+        "confidence": "High",
+        "supporting_evidence": [
+          "Anamnesis:PT-001/hpi"
+        ]
+      },
+      {
+        "action": "Schedule a follow-up appointment to reassess blood pressure and discuss medication adherence and lifestyle modifications.",
+        "confidence": "Moderate",
+        "supporting_evidence": [
+          "EHR:PT-001/visit_note(2026-03-15)"
+        ]
+      },
+      {
+        "action": "Encourage the patient to monitor blood pressure at home and report any significant changes or symptoms.",
+        "confidence": "High",
+        "supporting_evidence": [
+          "RPM alert"
+        ]
+      }
+    ],
+    "uncertainties_and_gaps": [
+      "No recent blood pressure readings indicating sustained high blood pressure found in EHR; only an average of 126/80 was noted.",
+      "No additional antihypertensive medications or reversible factors contributing to hypertension were identified."
+    ],
+    "overall_confidence": "Moderate",
+    "cited_sources": [
+      "RPM alert",
+      "RPM trend",
+      "Anamnesis:PT-001/hpi",
+      "Anamnesis:PT-001/chief_complaint",
+      "EHR:PT-001/problem_list",
+      "EHR:PT-001/visit_note(2026-03-15)"
+    ]
+  },
+  "session": {
+    "alert_id": "ALERT-PT-001",
+    "patient_id": "PT-001",
+    "created_at": "2026-06-17T12:13:10",
+    "events": [
+      {
+        "ts": "2026-06-17T12:13:10",
+        "step": "alert_received",
+        "summary": "blood_pressure=178.5/99.9 mmHg (BP_HIGH)",
+        "data": {}
+      },
+      {
+        "ts": "2026-06-17T12:13:10",
+        "step": "severity_floor",
+        "summary": "rule severity=urgent, effective floor=Urgent",
+        "data": {
+          "severity": "urgent",
+          "urgency": "Urgent",
+          "rationale": "Systolic 178.5 mmHg (>=200 critical, >=170 urgent, > threshold routine)."
+        }
+      },
+      {
+        "ts": "2026-06-17T12:13:15",
+        "step": "triage",
+        "summary": "urgency=Urgent: What is causing this patient's sustained high blood pressure, and are there any reversible factors contributing to it?",
+        "data": {
+          "urgency": "Urgent"
+        }
+      },
+      {
+        "ts": "2026-06-17T12:13:33",
+        "step": "ehr_retrieval",
+        "summary": "1 problems, 1 meds, 1 labs (confidence 0.8)",
+        "data": {}
+      },
+      {
+        "ts": "2026-06-17T12:13:33",
+        "step": "anamnesis",
+        "summary": "adherence=partial, 2 symptoms",
+        "data": {}
+      },
+      {
+        "ts": "2026-06-17T12:13:45",
+        "step": "synthesis",
+        "summary": "Clinical Context Brief produced.",
+        "data": {}
+      },
+      {
+        "ts": "2026-06-17T12:13:45",
+        "step": "complete",
+        "summary": "final_urgency=Urgent, escalated=False",
+        "data": {}
+      }
+    ]
+  }
+}

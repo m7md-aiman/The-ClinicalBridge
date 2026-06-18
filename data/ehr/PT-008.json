@@ -1,0 +1,74 @@
+{
+  "patient_id": "PT-008",
+  "name": "Rosa Jimenez",
+  "date_of_birth": "1951-08-25",
+  "age": 74,
+  "sex": "female",
+  "mrn": "MRN-008",
+  "problem_list": [
+    {
+      "condition": "Chronic kidney disease, stage 3",
+      "icd10": "N18.3",
+      "status": "active",
+      "onset_date": "2020-05-10"
+    },
+    {
+      "condition": "Essential hypertension",
+      "icd10": "I10",
+      "status": "active",
+      "onset_date": "2010-03-01"
+    }
+  ],
+  "medications": [
+    {
+      "name": "Amlodipine",
+      "dose": "5 mg",
+      "frequency": "once daily",
+      "started": "2010-03-01",
+      "status": "active"
+    },
+    {
+      "name": "Losartan",
+      "dose": "50 mg",
+      "frequency": "once daily",
+      "started": "2020-05-10",
+      "status": "active"
+    }
+  ],
+  "allergies": [],
+  "lab_results": [
+    {
+      "test": "Creatinine",
+      "value": "1.6",
+      "unit": "mg/dL",
+      "reference_range": "0.6-1.1",
+      "date": "2026-05-05",
+      "flag": "high"
+    },
+    {
+      "test": "eGFR",
+      "value": "42",
+      "unit": "mL/min/1.73m2",
+      "reference_range": ">60",
+      "date": "2026-05-05",
+      "flag": "low"
+    },
+    {
+      "test": "Potassium",
+      "value": "4.8",
+      "unit": "mmol/L",
+      "reference_range": "3.5-5.1",
+      "date": "2026-05-05",
+      "flag": "normal"
+    }
+  ],
+  "visit_notes": [
+    {
+      "date": "2026-05-05",
+      "author": "Dr. Okafor",
+      "specialty": "Nephrology",
+      "note": "74F CKD3 (eGFR 42) and HTN. Stable renal function. BP goal <130/80. Avoid NSAIDs. Continue losartan and amlodipine."
+    }
+  ],
+  "record_completeness": "complete"
+}

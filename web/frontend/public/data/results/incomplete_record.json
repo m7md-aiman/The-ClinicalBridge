@@ -1,0 +1,366 @@
+{
+  "scenario": {
+    "id": "incomplete_record",
+    "title": "The Incomplete Record",
+    "lesson": "A patient transfers from another system; the EHR is sparse, so the system must rely heavily on anamnesis data while clearly flagging the gaps.",
+    "expected_urgency": "Routine",
+    "patient_id": "PT-004",
+    "alert": {
+      "alert_id": "ALERT-PT-004",
+      "patient_id": "PT-004",
+      "timestamp": "2026-06-01T08:00:00",
+      "device_type": "loaner BP cuff",
+      "reading": {
+        "vital_type": "blood_pressure",
+        "value": 165.0,
+        "value_secondary": 94.9,
+        "unit": "mmHg"
+      },
+      "device_alert_category": "BP_HIGH",
+      "baseline_value": null,
+      "thresholds": {
+        "vital_type": "blood_pressure",
+        "low": 90.0,
+        "high": 140.0,
+        "unit": "mmHg"
+      },
+      "notes": "Newly transferred patient; no established baseline on file."
+    },
+    "alert_display": "165/94.9 mmHg",
+    "alert_category": "BP_HIGH"
+  },
+  "result": {
+    "alert_id": "ALERT-PT-004",
+    "patient_id": "PT-004",
+    "final_urgency": "Urgent",
+    "escalated": false,
+    "deterministic_severity": {
+      "severity": "routine",
+      "urgency": "Routine",
+      "rationale": "Systolic 165 mmHg (>=200 critical, >=170 urgent, > threshold routine)."
+    },
+    "errors": [],
+    "triage": {
+      "patient_id": "PT-004",
+      "urgency": "Urgent",
+      "clinical_question": "What factors are contributing to this patient's elevated blood pressure, and is there a need for immediate intervention?",
+      "reasoning": "The measured blood pressure is significantly above the threshold of 140 mmHg, indicating a need for same-day clinical review, especially since there is no established baseline to compare against; however, there are no acute symptoms reported.",
+      "requires_immediate_escalation": false,
+      "ehr_query": {
+        "focus_terms": [
+          "hypertension",
+          "antihypertensive medications",
+          "recent blood pressure",
+          "cardiovascular risk factors"
+        ],
+        "rationale": "These terms are crucial for understanding the patient's blood pressure status and potential treatment options."
+      },
+      "anamnesis_query": {
+        "focus_terms": [
+          "medication adherence",
+          "recent symptoms",
+          "diet or lifestyle changes",
+          "stress levels"
+        ],
+        "rationale": "These topics will help identify any reversible factors contributing to the elevated blood pressure."
+      }
+    },
+    "ehr_context": {
+      "patient_id": "PT-004",
+      "problem_list": [
+        {
+          "condition": "Hypertension",
+          "icd10_code": "I10",
+          "status": "active",
+          "onset_date": null,
+          "source_ref": "EHR:PT-004/problem_list"
+        }
+      ],
+      "medications": [],
+      "lab_results": [],
+      "visit_notes": [],
+      "retrieval_confidence": 0.2,
+      "missing_data_flags": [
+        "Recent blood pressure readings are missing.",
+        "Antihypertensive medications are missing.",
+        "Cardiovascular risk factors are missing."
+      ],
+      "source_documents": [
+        "EHR:PT-004/problem_list",
+        "EHR:PT-004/visit_note(2026-05-29)",
+        "EHR:PT-004/record_status",
+        "EHR:PT-004/allergies"
+      ]
+    },
+    "anamnesis_summary": {
+      "patient_id": "PT-004",
+      "reported_symptoms": [
+        {
+          "symptom": "high blood pressure",
+          "onset": null,
+          "progression": null,
+          "patient_words": "high blood pressure 'for years'",
+          "clinical_interpretation": "chronic hypertension",
+          "source_ref": "Anamnesis:PT-004/hpi"
+        },
+        {
+          "symptom": "occasional mild headaches",
+          "onset": "occasional",
+          "progression": "mild",
+          "patient_words": "Occasional mild headaches",
+          "clinical_interpretation": "tension-type headaches",
+          "source_ref": "Anamnesis:PT-004/ros"
+        }
+      ],
+      "medication_adherence": "non_adherent",
+      "adherence_detail": "Ran out of 'water pill' ~3 weeks ago during the move; names unknown.",
+      "lifestyle_factors": [
+        "vegetarian diet",
+        "occasional wine",
+        "yoga twice weekly"
+      ],
+      "family_history": [
+        "Mother: hypertension, stroke",
+        "Brother: type 2 diabetes"
+      ],
+      "patient_concerns": [
+        "Wants to get back on her medications.",
+        "Worried because her mother had a stroke."
+      ],
+      "sensitive_flags": [],
+      "missing_data_flags": [
+        "exact names of medications are unknown"
+      ],
+      "source_documents": [
+        "[Anamnesis:PT-004/chief_complaint]",
+        "[Anamnesis:PT-004/hpi]",
+        "[Anamnesis:PT-004/ros]",
+        "[Anamnesis:PT-004/social]",
+        "[Anamnesis:PT-004/family]",
+        "[Anamnesis:PT-004/adherence]",
+        "[Anamnesis:PT-004/concerns]"
+      ]
+    },
+    "brief": {
+      "patient_id": "PT-004",
+      "generated_at": "2026-06-17T12:15:01.223175",
+      "alert_summary": "Blood pressure reading of 165/94.9 mmHg indicates high blood pressure, with a rising trend observed over 30 readings. Urgency classified as Urgent due to potential need for immediate intervention.",
+      "urgency": "Urgent",
+      "patient_snapshot": "Patient is a newly transferred individual with a history of chronic hypertension and occasional mild headaches. Currently, there is no established baseline for blood pressure readings, and antihypertensive medications are unknown.",
+      "contextual_analysis": [
+        {
+          "statement": "The patient reports a history of high blood pressure for years, indicating chronic hypertension, which aligns with the current elevated reading.",
+          "sources": [
+            "Anamnesis:PT-004/hpi"
+          ]
+        },
+        {
+          "statement": "The patient has been non-adherent to her antihypertensive regimen, having run out of her 'water pill' approximately three weeks ago, which may contribute to the current elevated blood pressure.",
+          "sources": [
+            "Anamnesis:PT-004/adherence"
+          ]
+        },
+        {
+          "statement": "The rising trend in blood pressure readings from 156.8 to 165.0 mmHg suggests worsening hypertension, which is corroborated by the patient's self-reported history of chronic hypertension.",
+          "sources": [
+            "RPM trend",
+            "Anamnesis:PT-004/hpi"
+          ]
+        }
+      ],
+      "risk_assessment": [
+        {
+          "statement": "The patient's elevated blood pressure and non-adherence to medications increase the risk of cardiovascular events, particularly given her family history of hypertension and stroke.",
+          "sources": [
+            "Anamnesis:PT-004/family"
+          ]
+        },
+        {
+          "statement": "The absence of recent blood pressure readings and antihypertensive medications in the EHR raises concerns about the patient's current management and potential for acute complications.",
+          "sources": [
+            "EHR:PT-004/problem_list"
+          ]
+        }
+      ],
+      "recommended_actions": [
+        {
+          "action": "Assess the patient's current medication regimen and provide necessary antihypertensive medications immediately.",
+          "confidence": "High",
+          "supporting_evidence": [
+            "Anamnesis:PT-004/concerns",
+            "Anamnesis:PT-004/hpi"
+          ]
+        },
+        {
+          "action": "Obtain a complete medication list and recent blood pressure readings to establish a baseline for further management.",
+          "confidence": "Moderate",
+          "supporting_evidence": [
+            "EHR:PT-004/problem_list",
+            "Anamnesis:PT-004/hpi"
+          ]
+        }
+      ],
+      "uncertainties_and_gaps": [
+        "Recent blood pressure readings are missing from the EHR, which limits understanding of the patient's current status.",
+        "Exact names of the patient's previous antihypertensive medications are unknown, complicating medication management."
+      ],
+      "overall_confidence": "Low",
+      "cited_sources": [
+        "Anamnesis:PT-004/adherence",
+        "Anamnesis:PT-004/hpi",
+        "Anamnesis:PT-004/family",
+        "RPM alert",
+        "RPM trend",
+        "EHR:PT-004/problem_list"
+      ]
+    },
+    "session": {
+      "alert_id": "ALERT-PT-004",
+      "patient_id": "PT-004",
+      "created_at": "2026-06-17T12:14:39",
+      "events": [
+        {
+          "ts": "2026-06-17T12:14:39",
+          "step": "alert_received",
+          "summary": "blood_pressure=165/94.9 mmHg (BP_HIGH)",
+          "data": {}
+        },
+        {
+          "ts": "2026-06-17T12:14:39",
+          "step": "severity_floor",
+          "summary": "rule severity=routine, effective floor=Routine",
+          "data": {
+            "severity": "routine",
+            "urgency": "Routine",
+            "rationale": "Systolic 165 mmHg (>=200 critical, >=170 urgent, > threshold routine)."
+          }
+        },
+        {
+          "ts": "2026-06-17T12:14:44",
+          "step": "triage",
+          "summary": "urgency=Urgent: What factors are contributing to this patient's elevated blood pressure, and is there a need for immediate intervention?",
+          "data": {
+            "urgency": "Urgent"
+          }
+        },
+        {
+          "ts": "2026-06-17T12:14:50",
+          "step": "ehr_retrieval",
+          "summary": "1 problems, 0 meds, 0 labs (confidence 0.2)",
+          "data": {}
+        },
+        {
+          "ts": "2026-06-17T12:14:50",
+          "step": "anamnesis",
+          "summary": "adherence=non_adherent, 2 symptoms",
+          "data": {}
+        },
+        {
+          "ts": "2026-06-17T12:15:01",
+          "step": "synthesis",
+          "summary": "Clinical Context Brief produced.",
+          "data": {}
+        },
+        {
+          "ts": "2026-06-17T12:15:01",
+          "step": "complete",
+          "summary": "final_urgency=Urgent, escalated=False",
+          "data": {}
+        }
+      ]
+    }
+  },
+  "score": {
+    "final_urgency": "Urgent",
+    "acceptable_urgencies": [
+      "Routine",
+      "Urgent"
+    ],
+    "urgency_ok": true,
+    "must_include_coverage": 0.667,
+    "must_include_missing": [
+      "restart|resume|reinitiat|re-establish|reestablish"
+    ],
+    "must_flag_coverage": 1.0,
+    "must_flag_missing": [],
+    "must_avoid_violations": [],
+    "citation_coverage": 1.0,
+    "citations_cited": 5,
+    "citations_total": 5,
+    "hallucinated_citations": [],
+    "hallucination_count": 0,
+    "latency_seconds": null,
+    "errors": 0,
+    "passed": true
+  },
+  "gold_brief": {
+    "patient_id": "PT-004",
+    "generated_at": "2026-06-01T08:00:00",
+    "alert_summary": "Blood pressure 165/94.9 mmHg on a loaner cuff, above the 140/90 threshold. Baseline unknown \u2014 this is a newly transferred patient. Classified Routine pending more data.",
+    "urgency": "Routine",
+    "patient_snapshot": "61-year-old woman establishing care after an out-of-state move. Reports long-standing hypertension, but outside records have not yet arrived; no medications, labs, or confirmed history are in the system.",
+    "contextual_analysis": [
+      {
+        "statement": "The patient reports she ran out of her antihypertensives (a 'water pill and a small white tablet') about three weeks ago during the move and has not refilled them.",
+        "sources": [
+          "Anamnesis:PT-004/hpi",
+          "Anamnesis:PT-004/adherence"
+        ]
+      },
+      {
+        "statement": "The elevated reading is consistent with recent cessation of unspecified antihypertensive therapy.",
+        "sources": [
+          "RPM alert",
+          "Anamnesis:PT-004/hpi"
+        ]
+      }
+    ],
+    "risk_assessment": [
+      {
+        "statement": "Uncontrolled hypertension with a family history of stroke warrants timely treatment, though she is currently asymptomatic.",
+        "sources": [
+          "Anamnesis:PT-004/family",
+          "Anamnesis:PT-004/ros"
+        ]
+      }
+    ],
+    "recommended_actions": [
+      {
+        "action": "Establish care: obtain the outside records and reconcile her prior medications.",
+        "confidence": "High",
+        "supporting_evidence": [
+          "EHR:PT-004/visit_note"
+        ]
+      },
+      {
+        "action": "Restart antihypertensive therapy per clinical judgment, since she is currently untreated.",
+        "confidence": "Moderate",
+        "supporting_evidence": [
+          "Anamnesis:PT-004/adherence"
+        ]
+      },
+      {
+        "action": "Confirm home BP monitoring and schedule near-term follow-up.",
+        "confidence": "Moderate",
+        "supporting_evidence": [
+          "RPM alert"
+        ]
+      }
+    ],
+    "uncertainties_and_gaps": [
+      "The EHR is sparse: no medication list, no labs, and no confirmed problem list \u2014 outside records were requested but not received.",
+      "Exact prior medications are unknown (the patient could not name them).",
+      "No reliable baseline blood pressure is available for comparison."
+    ],
+    "overall_confidence": "Moderate",
+    "cited_sources": [
+      "RPM alert",
+      "EHR:PT-004/visit_note",
+      "Anamnesis:PT-004/hpi",
+      "Anamnesis:PT-004/adherence",
+      "Anamnesis:PT-004/family"
+    ]
+  },
+  "gold_brief_markdown": "# Clinical Context Brief \u2014 Patient PT-004\n_Generated 2026-06-01 08:00 \u00b7 Urgency: **Routine** \u00b7 Overall confidence: **Moderate**_\n\n## 1. Alert Summary\nBlood pressure 165/94.9 mmHg on a loaner cuff, above the 140/90 threshold. Baseline unknown \u2014 this is a newly transferred patient. Classified Routine pending more data.\n\n## 2. Patient Snapshot\n61-year-old woman establishing care after an out-of-state move. Reports long-standing hypertension, but outside records have not yet arrived; no medications, labs, or confirmed history are in the system.\n\n## 3. Contextual Analysis\n- The patient reports she ran out of her antihypertensives (a 'water pill and a small white tablet') about three weeks ago during the move and has not refilled them.  \n  _sources: Anamnesis:PT-004/hpi, Anamnesis:PT-004/adherence_\n- The elevated reading is consistent with recent cessation of unspecified antihypertensive therapy.  \n  _sources: RPM alert, Anamnesis:PT-004/hpi_\n\n## 4. Risk Assessment\n- Uncontrolled hypertension with a family history of stroke warrants timely treatment, though she is currently asymptomatic.  \n  _sources: Anamnesis:PT-004/family, Anamnesis:PT-004/ros_\n\n## 5. Recommended Actions\n- [High] Establish care: obtain the outside records and reconcile her prior medications. _(evidence: EHR:PT-004/visit_note)_\n- [Moderate] Restart antihypertensive therapy per clinical judgment, since she is currently untreated. _(evidence: Anamnesis:PT-004/adherence)_\n- [Moderate] Confirm home BP monitoring and schedule near-term follow-up. _(evidence: RPM alert)_\n\n## 6. Uncertainties & Gaps\n- The EHR is sparse: no medication list, no labs, and no confirmed problem list \u2014 outside records were requested but not received.\n- Exact prior medications are unknown (the patient could not name them).\n- No reliable baseline blood pressure is available for comparison.\n\n_Sources consulted: RPM alert, EHR:PT-004/visit_note, Anamnesis:PT-004/hpi, Anamnesis:PT-004/adherence, Anamnesis:PT-004/family_",
+  "cached": true
+}

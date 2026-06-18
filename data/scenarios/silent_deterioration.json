@@ -1,0 +1,121 @@
+{
+  "id": "silent_deterioration",
+  "title": "The Silent Deterioration",
+  "patient_id": "PT-003",
+  "description": "A heart-failure patient's weight rises gradually over two weeks; each reading is within threshold, but the trend plus reported ankle swelling suggests fluid retention.",
+  "expected_urgency": "Urgent",
+  "alert": {
+    "alert_id": "ALERT-PT-003",
+    "patient_id": "PT-003",
+    "timestamp": "2026-06-01T08:00:00",
+    "device_type": "Withings scale",
+    "reading": {
+      "vital_type": "weight",
+      "value": 85.8,
+      "value_secondary": null,
+      "unit": "kg"
+    },
+    "device_alert_category": "WEIGHT_GAIN_TREND",
+    "baseline_value": 81.5,
+    "thresholds": {
+      "vital_type": "weight",
+      "low": 70.0,
+      "high": 88.0,
+      "unit": "kg"
+    },
+    "notes": "Gradual ~4 kg gain over 14 days; no single reading above the absolute threshold, but the upward trend triggered a trend-based alert."
+  },
+  "rubric": {
+    "acceptable_urgencies": [
+      "Urgent",
+      "Critical"
+    ],
+    "must_include": [
+      "weight",
+      "fluid|retention|volume|edema|swelling",
+      "furosemide|diuretic",
+      "trend|gradual|gain"
+    ],
+    "must_flag": [
+      "lab|electrolyte|renal|kidney"
+    ],
+    "must_avoid": []
+  },
+  "gold_brief": {
+    "patient_id": "PT-003",
+    "generated_at": "2026-06-01T08:00:00",
+    "alert_summary": "Body weight has risen to 85.8 kg \u2014 roughly a 4 kg gain over two weeks. No single reading crossed the 88 kg threshold, but the steady upward trend triggered a trend-based alert. Classified Urgent.",
+    "urgency": "Urgent",
+    "patient_snapshot": "72-year-old man with HFrEF (EF 35%), hypertension, and atrial fibrillation on furosemide, carvedilol, and sacubitril-valsartan; documented dry weight 81.5 kg.",
+    "contextual_analysis": [
+      {
+        "statement": "The steady ~4 kg gain over 14 days is consistent with fluid retention rather than true weight gain.",
+        "sources": [
+          "RPM alert",
+          "EHR:PT-003/visit_note"
+        ]
+      },
+      {
+        "statement": "This is corroborated by new patient-reported bilateral ankle swelling and two-pillow orthopnea over the same period.",
+        "sources": [
+          "Anamnesis:PT-003/hpi",
+          "Anamnesis:PT-003/ros",
+          "Anamnesis:PT-003/diary"
+        ]
+      },
+      {
+        "statement": "The patient reports full medication adherence; recent salty takeout meals may have contributed.",
+        "sources": [
+          "Anamnesis:PT-003/adherence",
+          "Anamnesis:PT-003/social"
+        ]
+      }
+    ],
+    "risk_assessment": [
+      {
+        "statement": "These findings suggest early decompensated heart failure; without intervention this risks progression and hospitalization.",
+        "sources": [
+          "EHR:PT-003/problem_list",
+          "EHR:PT-003/labs"
+        ]
+      }
+    ],
+    "recommended_actions": [
+      {
+        "action": "Contact the patient today to assess volume status and consider a temporary furosemide (diuretic) increase per his heart-failure action plan.",
+        "confidence": "High",
+        "supporting_evidence": [
+          "RPM alert",
+          "Anamnesis:PT-003/ros"
+        ]
+      },
+      {
+        "action": "Counsel on dietary sodium restriction.",
+        "confidence": "Moderate",
+        "supporting_evidence": [
+          "Anamnesis:PT-003/social"
+        ]
+      },
+      {
+        "action": "Arrange near-term review with repeat weight, symptom check, and labs (renal function, electrolytes, NT-proBNP).",
+        "confidence": "Moderate",
+        "supporting_evidence": [
+          "EHR:PT-003/labs"
+        ]
+      }
+    ],
+    "uncertainties_and_gaps": [
+      "No labs since April 2026; current renal function and electrolytes are unknown before adjusting diuretics."
+    ],
+    "overall_confidence": "High",
+    "cited_sources": [
+      "RPM alert",
+      "EHR:PT-003/problem_list",
+      "EHR:PT-003/labs",
+      "EHR:PT-003/visit_note",
+      "Anamnesis:PT-003/hpi",
+      "Anamnesis:PT-003/ros",
+      "Anamnesis:PT-003/social"
+    ]
+  }
+}

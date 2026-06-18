@@ -1,0 +1,111 @@
+{
+  "id": "false_alarm",
+  "title": "The False Alarm",
+  "patient_id": "PT-002",
+  "description": "A diabetic patient's glucose reading triggers an alert, but the anamnesis records a planned dietary change and a recent medication adjustment \u2014 the alert is contextually benign.",
+  "expected_urgency": "Routine",
+  "alert": {
+    "alert_id": "ALERT-PT-002",
+    "patient_id": "PT-002",
+    "timestamp": "2026-06-01T08:00:00",
+    "device_type": "Contour glucometer",
+    "reading": {
+      "vital_type": "blood_glucose",
+      "value": 247.0,
+      "value_secondary": null,
+      "unit": "mg/dL"
+    },
+    "device_alert_category": "GLUCOSE_HIGH",
+    "baseline_value": 140.0,
+    "thresholds": {
+      "vital_type": "blood_glucose",
+      "low": 70.0,
+      "high": 180.0,
+      "unit": "mg/dL"
+    },
+    "notes": "Single fasting reading; prior readings within range."
+  },
+  "rubric": {
+    "acceptable_urgencies": [
+      "Routine",
+      "Informational"
+    ],
+    "must_include": [
+      "cake|birthday|indulg",
+      "diet|keto|low-carb",
+      "single|isolated|one reading|one-off"
+    ],
+    "must_flag": [
+      "follow-up|recheck|confirm|repeat"
+    ],
+    "must_avoid": [
+      "insulin"
+    ]
+  },
+  "gold_brief": {
+    "patient_id": "PT-002",
+    "generated_at": "2026-06-01T08:00:00",
+    "alert_summary": "Single fasting blood glucose of 247 mg/dL, above the 180 mg/dL threshold, in a patient whose readings have otherwise been ~110-150 all month. Classified Routine \u2014 likely contextually benign.",
+    "urgency": "Routine",
+    "patient_snapshot": "53-year-old woman with type 2 diabetes (A1c 7.4%, improving) and obesity, on metformin 1000 mg twice daily plus empagliflozin 10 mg daily (started two weeks ago).",
+    "contextual_analysis": [
+      {
+        "statement": "The isolated spike immediately followed a birthday celebration with cake and juice.",
+        "sources": [
+          "Anamnesis:PT-002/diary",
+          "Anamnesis:PT-002/hpi"
+        ]
+      },
+      {
+        "statement": "Her glucose had actually been running well (110-130) since starting a low-carb diet a week ago.",
+        "sources": [
+          "Anamnesis:PT-002/diary",
+          "RPM alert"
+        ]
+      },
+      {
+        "statement": "Empagliflozin was added two weeks ago and she was counseled that glucose may fluctuate during the adjustment period.",
+        "sources": [
+          "EHR:PT-002/visit_note",
+          "EHR:PT-002/medications"
+        ]
+      }
+    ],
+    "risk_assessment": [
+      {
+        "statement": "A single post-indulgence reading in an otherwise improving, asymptomatic patient is unlikely to reflect a meaningful change in control.",
+        "sources": [
+          "RPM alert",
+          "Anamnesis:PT-002/ros"
+        ]
+      }
+    ],
+    "recommended_actions": [
+      {
+        "action": "Reassure the patient; no urgent action needed. Continue the current regimen and diet.",
+        "confidence": "High",
+        "supporting_evidence": [
+          "Anamnesis:PT-002/diary"
+        ]
+      },
+      {
+        "action": "Recheck fasting glucose over the next few days to confirm return to baseline.",
+        "confidence": "Moderate",
+        "supporting_evidence": [
+          "RPM alert"
+        ]
+      }
+    ],
+    "uncertainties_and_gaps": [
+      "Only one elevated reading is available after the event; confirm with follow-up readings."
+    ],
+    "overall_confidence": "High",
+    "cited_sources": [
+      "RPM alert",
+      "EHR:PT-002/visit_note",
+      "EHR:PT-002/medications",
+      "Anamnesis:PT-002/diary",
+      "Anamnesis:PT-002/hpi"
+    ]
+  }
+}

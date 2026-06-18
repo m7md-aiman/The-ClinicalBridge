@@ -1,0 +1,58 @@
+{
+  "patient_id": "PT-011",
+  "name": "Beatrice Lowe",
+  "date_of_birth": "1945-10-02",
+  "age": 80,
+  "sex": "female",
+  "mrn": "MRN-011",
+  "problem_list": [
+    {
+      "condition": "Heart failure with preserved ejection fraction",
+      "icd10": "I50.32",
+      "status": "active",
+      "onset_date": "2021-06-30"
+    },
+    {
+      "condition": "Atrial fibrillation",
+      "icd10": "I48.91",
+      "status": "active",
+      "onset_date": "2019-02-14"
+    }
+  ],
+  "medications": [
+    {
+      "name": "Furosemide",
+      "dose": "20 mg",
+      "frequency": "once daily",
+      "started": "2021-06-30",
+      "status": "active"
+    },
+    {
+      "name": "Apixaban",
+      "dose": "5 mg",
+      "frequency": "twice daily",
+      "started": "2019-02-14",
+      "status": "active"
+    }
+  ],
+  "allergies": [],
+  "lab_results": [
+    {
+      "test": "NT-proBNP",
+      "value": "680",
+      "unit": "pg/mL",
+      "reference_range": "<300",
+      "date": "2026-03-12",
+      "flag": "high"
+    }
+  ],
+  "visit_notes": [
+    {
+      "date": "2026-03-12",
+      "author": "Dr. Okafor",
+      "specialty": "Cardiology",
+      "note": "80F HFpEF and AF on apixaban. Compensated. Dry weight ~68 kg. Continue low-dose diuretic and anticoagulation."
+    }
+  ],
+  "record_completeness": "complete"
+}

@@ -1,0 +1,111 @@
+@import "tailwindcss";
+
+/* Class-based dark mode (toggled by next-themes) instead of prefers-color-scheme. */
+@custom-variant dark (&:is(.dark *));
+
+/* ---- Clinical & trustworthy design tokens ---- */
+:root {
+  --background: #f6f8fb;
+  --foreground: #0f172a;
+  --card: #ffffff;
+  --card-foreground: #0f172a;
+  --muted: #eef2f7;
+  --muted-foreground: #64748b;
+  --border: #e2e8f0;
+  --input: #e2e8f0;
+  --primary: #0d9488;          /* teal-600 */
+  --primary-foreground: #ffffff;
+  --accent: #0284c7;           /* sky-600 */
+  --ring: #14b8a6;
+
+  --urgency-critical: #dc2626; /* red-600 */
+  --urgency-urgent: #d97706;   /* amber-600 */
+  --urgency-routine: #2563eb;  /* blue-600 */
+  --urgency-informational: #64748b; /* slate-500 */
+
+  --ok: #059669;               /* emerald-600 */
+  --bad: #dc2626;
+}
+
+.dark {
+  --background: #0a1120;
+  --foreground: #e6edf6;
+  --card: #0f1a2e;
+  --card-foreground: #e6edf6;
+  --muted: #16243c;
+  --muted-foreground: #94a3b8;
+  --border: #1e2d45;
+  --input: #1e2d45;
+  --primary: #2dd4bf;          /* teal-400 */
+  --primary-foreground: #04201c;
+  --accent: #38bdf8;           /* sky-400 */
+  --ring: #2dd4bf;
+
+  --urgency-critical: #f87171;
+  --urgency-urgent: #fbbf24;
+  --urgency-routine: #60a5fa;
+  --urgency-informational: #94a3b8;
+
+  --ok: #34d399;
+  --bad: #f87171;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-accent: var(--accent);
+  --color-ring: var(--ring);
+
+  --color-urgency-critical: var(--urgency-critical);
+  --color-urgency-urgent: var(--urgency-urgent);
+  --color-urgency-routine: var(--urgency-routine);
+  --color-urgency-informational: var(--urgency-informational);
+  --color-ok: var(--ok);
+  --color-bad: var(--bad);
+
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+
+  --radius-2xl: 1rem;
+}
+
+@layer base {
+  * {
+    border-color: var(--border);
+  }
+  body {
+    background-color: var(--background);
+    color: var(--foreground);
+    font-family: var(--font-sans), ui-sans-serif, system-ui, sans-serif;
+    -webkit-font-smoothing: antialiased;
+  }
+  ::selection {
+    background-color: color-mix(in srgb, var(--primary) 25%, transparent);
+  }
+}
+
+/* Subtle utility for the airy "clinical" surfaces */
+.surface-grid {
+  background-image: radial-gradient(
+    color-mix(in srgb, var(--foreground) 6%, transparent) 1px,
+    transparent 1px
+  );
+  background-size: 22px 22px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    transition-duration: 0.001ms !important;
+  }
+}

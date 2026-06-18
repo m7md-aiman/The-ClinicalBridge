@@ -1,0 +1,32 @@
+{
+  "patient_id": "PT-006",
+  "intake_date": "2026-05-20",
+  "chief_complaint": "Routine COPD monitoring.",
+  "history_of_present_illness": "Ms. Voss reports stable breathing, uses rescue inhaler ~twice a week. No fevers or change in sputum.",
+  "review_of_systems": {
+    "respiratory": "Chronic mild dyspnea on exertion, at baseline. No new cough."
+  },
+  "social_history": {
+    "smoking": "Former, 40 pack-years, quit 2017",
+    "alcohol": "None",
+    "diet": "Regular",
+    "exercise": "Short walks",
+    "occupation": "Retired",
+    "living_situation": "Lives with daughter"
+  },
+  "family_history": [
+    "Mother: COPD"
+  ],
+  "medication_adherence": [
+    {
+      "medication": "Tiotropium",
+      "reported_status": "adherent",
+      "detail": "Daily."
+    }
+  ],
+  "symptom_diary": [],
+  "patient_concerns": [
+    "Wants to avoid another winter hospitalization."
+  ],
+  "sensitive_notes": []
+}

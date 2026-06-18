@@ -1,0 +1,172 @@
+[
+  {
+    "patient_id": "PT-001",
+    "name": "Harold Whitfield",
+    "age": 68,
+    "sex": "male",
+    "conditions": [
+      "Essential hypertension",
+      "Hyperlipidemia"
+    ],
+    "monitored_vitals": [
+      "blood_pressure"
+    ],
+    "record_completeness": "complete"
+  },
+  {
+    "patient_id": "PT-002",
+    "name": "Maria Delgado",
+    "age": 53,
+    "sex": "female",
+    "conditions": [
+      "Type 2 diabetes mellitus without complications",
+      "Obesity"
+    ],
+    "monitored_vitals": [
+      "blood_glucose"
+    ],
+    "record_completeness": "complete"
+  },
+  {
+    "patient_id": "PT-003",
+    "name": "Walter Brennan",
+    "age": 72,
+    "sex": "male",
+    "conditions": [
+      "Heart failure with reduced ejection fraction",
+      "Essential hypertension",
+      "Atrial fibrillation"
+    ],
+    "monitored_vitals": [
+      "weight",
+      "heart_rate"
+    ],
+    "record_completeness": "complete"
+  },
+  {
+    "patient_id": "PT-004",
+    "name": "Priya Anand",
+    "age": 61,
+    "sex": "female",
+    "conditions": [
+      "Hypertension (per patient report; records pending)"
+    ],
+    "monitored_vitals": [
+      "blood_pressure"
+    ],
+    "record_completeness": "sparse"
+  },
+  {
+    "patient_id": "PT-005",
+    "name": "Gerald Foster",
+    "age": 65,
+    "sex": "male",
+    "conditions": [
+      "Atrial fibrillation",
+      "Essential hypertension"
+    ],
+    "monitored_vitals": [
+      "heart_rate"
+    ],
+    "record_completeness": "complete"
+  },
+  {
+    "patient_id": "PT-006",
+    "name": "Eleanor Voss",
+    "age": 76,
+    "sex": "female",
+    "conditions": [
+      "Chronic obstructive pulmonary disease"
+    ],
+    "monitored_vitals": [
+      "spo2",
+      "heart_rate"
+    ],
+    "record_completeness": "complete"
+  },
+  {
+    "patient_id": "PT-007",
+    "name": "Jamal Carter",
+    "age": 30,
+    "sex": "male",
+    "conditions": [
+      "Type 1 diabetes mellitus"
+    ],
+    "monitored_vitals": [
+      "blood_glucose"
+    ],
+    "record_completeness": "complete"
+  },
+  {
+    "patient_id": "PT-008",
+    "name": "Rosa Jimenez",
+    "age": 74,
+    "sex": "female",
+    "conditions": [
+      "Chronic kidney disease, stage 3",
+      "Essential hypertension"
+    ],
+    "monitored_vitals": [
+      "blood_pressure"
+    ],
+    "record_completeness": "complete"
+  },
+  {
+    "patient_id": "PT-009",
+    "name": "Frank Mueller",
+    "age": 70,
+    "sex": "male",
+    "conditions": [
+      "Coronary artery disease, status post MI",
+      "Hyperlipidemia"
+    ],
+    "monitored_vitals": [
+      "heart_rate",
+      "blood_pressure"
+    ],
+    "record_completeness": "complete"
+  },
+  {
+    "patient_id": "PT-010",
+    "name": "Tina Robinson",
+    "age": 48,
+    "sex": "female",
+    "conditions": [
+      "Type 2 diabetes mellitus without complications",
+      "Obesity"
+    ],
+    "monitored_vitals": [
+      "blood_glucose"
+    ],
+    "record_completeness": "complete"
+  },
+  {
+    "patient_id": "PT-011",
+    "name": "Beatrice Lowe",
+    "age": 80,
+    "sex": "female",
+    "conditions": [
+      "Heart failure with preserved ejection fraction",
+      "Atrial fibrillation"
+    ],
+    "monitored_vitals": [
+      "weight",
+      "blood_pressure"
+    ],
+    "record_completeness": "complete"
+  },
+  {
+    "patient_id": "PT-012",
+    "name": "Daniel Park",
+    "age": 45,
+    "sex": "male",
+    "conditions": [
+      "Essential hypertension",
+      "Generalized anxiety disorder"
+    ],
+    "monitored_vitals": [
+      "blood_pressure"
+    ],
+    "record_completeness": "complete"
+  }
+]

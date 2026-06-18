@@ -1,0 +1,45 @@
+{
+  "patient_id": "PT-012",
+  "intake_date": "2026-05-27",
+  "chief_complaint": "Blood pressure and stress.",
+  "history_of_present_illness": "Mr. Park reports a stressful week at work with a deadline. He noticed a higher BP reading after a tense meeting. He takes his medications regularly.",
+  "review_of_systems": {
+    "cardiovascular": "No chest pain.",
+    "psychiatric": "Increased work-related anxiety this week."
+  },
+  "social_history": {
+    "smoking": "Never",
+    "alcohol": "1-2 drinks/week",
+    "diet": "Skips meals when busy",
+    "exercise": "Sporadic",
+    "occupation": "Project manager",
+    "living_situation": "Lives with partner"
+  },
+  "family_history": [
+    "Father: hypertension"
+  ],
+  "medication_adherence": [
+    {
+      "medication": "Amlodipine",
+      "reported_status": "adherent",
+      "detail": "Daily."
+    },
+    {
+      "medication": "Sertraline",
+      "reported_status": "adherent",
+      "detail": "Daily."
+    }
+  ],
+  "symptom_diary": [
+    {
+      "date": "2026-05-31",
+      "entry": "Rough day, big deadline. BP cuff read 158/98 after my 4pm meeting."
+    }
+  ],
+  "patient_concerns": [
+    "Worried stress is affecting his heart."
+  ],
+  "sensitive_notes": [
+    "Patient discusses anxiety/work stress; handle supportively and without judgment."
+  ]
+}

@@ -1,0 +1,33 @@
+{
+  "patient_id": "PT-011",
+  "intake_date": "2026-05-08",
+  "chief_complaint": "Heart failure check-in.",
+  "history_of_present_illness": "Ms. Lowe feels stable, weight steady, no increased swelling or breathlessness.",
+  "review_of_systems": {
+    "cardiovascular": "No edema, no orthopnea.",
+    "respiratory": "No new dyspnea."
+  },
+  "social_history": {
+    "smoking": "Never",
+    "alcohol": "None",
+    "diet": "Low-salt",
+    "exercise": "Walks indoors",
+    "occupation": "Retired librarian",
+    "living_situation": "Assisted living"
+  },
+  "family_history": [
+    "Sister: atrial fibrillation"
+  ],
+  "medication_adherence": [
+    {
+      "medication": "Apixaban",
+      "reported_status": "adherent",
+      "detail": "Twice daily."
+    }
+  ],
+  "symptom_diary": [],
+  "patient_concerns": [
+    "Wants to stay independent."
+  ],
+  "sensitive_notes": []
+}

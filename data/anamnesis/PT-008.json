@@ -1,0 +1,33 @@
+{
+  "patient_id": "PT-008",
+  "intake_date": "2026-05-15",
+  "chief_complaint": "Kidney and blood pressure follow-up.",
+  "history_of_present_illness": "Ms. Jimenez feels well. No swelling, urinating normally.",
+  "review_of_systems": {
+    "genitourinary": "No dysuria, normal urine output.",
+    "cardiovascular": "No edema."
+  },
+  "social_history": {
+    "smoking": "Never",
+    "alcohol": "None",
+    "diet": "Low-sodium, renal diet",
+    "exercise": "Gardening",
+    "occupation": "Retired seamstress",
+    "living_situation": "Lives with spouse"
+  },
+  "family_history": [
+    "Mother: kidney disease"
+  ],
+  "medication_adherence": [
+    {
+      "medication": "Losartan",
+      "reported_status": "adherent",
+      "detail": "Daily."
+    }
+  ],
+  "symptom_diary": [],
+  "patient_concerns": [
+    "Worried about needing dialysis someday."
+  ],
+  "sensitive_notes": []
+}

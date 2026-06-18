@@ -1,0 +1,21 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "clinicalbridge"
+version = "0.1.0"
+description = "ClinicalBridge — a multi-agent LLM system that synthesizes EHR, RPM, and anamnesis data into a Clinical Context Brief (COP-3442 capstone)."
+requires-python = ">=3.11"
+readme = "README.md"
+
+# Runtime dependencies are pinned in requirements.txt for explicit, reproducible
+# installs. This section keeps the package itself installable via `pip install -e .`
+# so `import clinicalbridge` works from scripts, tests, and eval.
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+pythonpath = ["src", "."]   # src for clinicalbridge, "." for the web.* backend package
+testpaths = ["tests", "eval"]

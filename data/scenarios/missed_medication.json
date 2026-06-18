@@ -1,0 +1,125 @@
+{
+  "id": "missed_medication",
+  "title": "The Missed Medication",
+  "patient_id": "PT-001",
+  "description": "A hypertensive patient's BP spikes; the anamnesis reveals he stopped his ACE inhibitor due to a persistent cough \u2014 a side effect not flagged in the EHR.",
+  "expected_urgency": "Urgent",
+  "alert": {
+    "alert_id": "ALERT-PT-001",
+    "patient_id": "PT-001",
+    "timestamp": "2026-06-01T08:00:00",
+    "device_type": "Omron BP cuff",
+    "reading": {
+      "vital_type": "blood_pressure",
+      "value": 178.5,
+      "value_secondary": 99.9,
+      "unit": "mmHg"
+    },
+    "device_alert_category": "BP_HIGH",
+    "baseline_value": 126.0,
+    "thresholds": {
+      "vital_type": "blood_pressure",
+      "low": 90.0,
+      "high": 140.0,
+      "unit": "mmHg"
+    },
+    "notes": "Sustained elevation over multiple consecutive morning readings."
+  },
+  "rubric": {
+    "acceptable_urgencies": [
+      "Urgent",
+      "Critical"
+    ],
+    "must_include": [
+      "lisinopril",
+      "cough",
+      "stopped|discontinu|self-discontinu|non-adher"
+    ],
+    "must_flag": [
+      "self-report|not documented|relies"
+    ],
+    "must_avoid": []
+  },
+  "gold_brief": {
+    "patient_id": "PT-001",
+    "generated_at": "2026-06-01T08:00:00",
+    "alert_summary": "Home blood pressure 178.5/99.9 mmHg, sustained over multiple morning readings and well above both the 140/90 threshold and the patient's 126/80 baseline. Classified Urgent.",
+    "urgency": "Urgent",
+    "patient_snapshot": "68-year-old man with essential hypertension (I10) and hyperlipidemia, prescribed lisinopril 10 mg daily and atorvastatin 20 mg nightly; previously well controlled (clinic average ~126/80).",
+    "contextual_analysis": [
+      {
+        "statement": "Blood pressure began climbing about two weeks ago, coinciding with the patient self-discontinuing his lisinopril.",
+        "sources": [
+          "RPM alert",
+          "Anamnesis:PT-001/hpi",
+          "Anamnesis:PT-001/diary"
+        ]
+      },
+      {
+        "statement": "He stopped lisinopril because of a persistent dry cough \u2014 a recognized ACE-inhibitor side effect \u2014 and did not inform the care team.",
+        "sources": [
+          "Anamnesis:PT-001/hpi",
+          "Anamnesis:PT-001/adherence"
+        ]
+      },
+      {
+        "statement": "Atorvastatin was continued and cholesterol remains controlled (LDL 98).",
+        "sources": [
+          "Anamnesis:PT-001/adherence",
+          "EHR:PT-001/labs"
+        ]
+      }
+    ],
+    "risk_assessment": [
+      {
+        "statement": "Untreated stage 2 hypertension raises stroke and cardiovascular risk, compounded by a family history of stroke.",
+        "sources": [
+          "EHR:PT-001/problem_list",
+          "Anamnesis:PT-001/family"
+        ]
+      },
+      {
+        "statement": "The patient is currently asymptomatic (no chest pain, headache, or neurological deficit), so this is urgent rather than a hypertensive emergency.",
+        "sources": [
+          "Anamnesis:PT-001/ros"
+        ]
+      }
+    ],
+    "recommended_actions": [
+      {
+        "action": "Contact the patient today to confirm medication status and resume antihypertensive therapy.",
+        "confidence": "High",
+        "supporting_evidence": [
+          "Anamnesis:PT-001/adherence"
+        ]
+      },
+      {
+        "action": "Consider switching from the ACE inhibitor to an ARB (e.g., losartan) to resolve the cough that drove non-adherence.",
+        "confidence": "High",
+        "supporting_evidence": [
+          "Anamnesis:PT-001/hpi"
+        ]
+      },
+      {
+        "action": "Recheck blood pressure within a few days of restarting therapy.",
+        "confidence": "Moderate",
+        "supporting_evidence": [
+          "RPM alert"
+        ]
+      }
+    ],
+    "uncertainties_and_gaps": [
+      "The ACE-inhibitor cough is not documented in the EHR; this link relies entirely on patient self-report.",
+      "No in-clinic blood pressure since March 2026; assessment relies on home-device readings."
+    ],
+    "overall_confidence": "High",
+    "cited_sources": [
+      "RPM alert",
+      "EHR:PT-001/problem_list",
+      "EHR:PT-001/labs",
+      "Anamnesis:PT-001/hpi",
+      "Anamnesis:PT-001/adherence",
+      "Anamnesis:PT-001/diary"
+    ]
+  }
+}

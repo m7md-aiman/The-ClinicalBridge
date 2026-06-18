@@ -1,0 +1,416 @@
+{
+  "patient_id": "PT-011",
+  "monitoring_start": "2026-05-03",
+  "monitoring_end": "2026-06-01",
+  "reading_frequency": "daily",
+  "vitals": [
+    {
+      "vital_type": "weight",
+      "unit": "kg",
+      "device": "Withings scale",
+      "baseline": 68.0,
+      "threshold_low": 60.0,
+      "threshold_high": 73.0
+    },
+    {
+      "vital_type": "blood_pressure",
+      "unit": "mmHg",
+      "device": "Omron BP cuff",
+      "baseline": 128,
+      "threshold_low": 90,
+      "threshold_high": 145
+    }
+  ],
+  "readings": [
+    {
+      "timestamp": "2026-05-03T08:00",
+      "vital_type": "weight",
+      "value": 68.1,
+      "unit": "kg"
+    },
+    {
+      "timestamp": "2026-05-04T08:00",
+      "vital_type": "weight",
+      "value": 68.2,
+      "unit": "kg"
+    },
+    {
+      "timestamp": "2026-05-05T08:00",
+      "vital_type": "weight",
+      "value": 68.3,
+      "unit": "kg"
+    },
+    {
+      "timestamp": "2026-05-06T08:00",
+      "vital_type": "weight",
+      "value": 68.5,
+      "unit": "kg"
+    },
+    {
+      "timestamp": "2026-05-07T08:00",
+      "vital_type": "weight",
+      "value": 68.7,
+      "unit": "kg"
+    },
+    {
+      "timestamp": "2026-05-08T08:00",
+      "vital_type": "weight",
+      "value": 67.5,
+      "unit": "kg"
+    },
+    {
+      "timestamp": "2026-05-09T08:00",
+      "vital_type": "weight",
+      "value": 67.9,
+      "unit": "kg"
+    },
+    {
+      "timestamp": "2026-05-10T08:00",
+      "vital_type": "weight",
+      "value": 67.4,
+      "unit": "kg"
+    },
+    {
+      "timestamp": "2026-05-11T08:00",
+      "vital_type": "weight",
+      "value": 67.9,
+      "unit": "kg"
+    },
+    {
+      "timestamp": "2026-05-12T08:00",
+      "vital_type": "weight",
+      "value": 68.3,
+      "unit": "kg"
+    },
+    {
+      "timestamp": "2026-05-13T08:00",
+      "vital_type": "weight",
+      "value": 68.1,
+      "unit": "kg"
+    },
+    {
+      "timestamp": "2026-05-14T08:00",
+      "vital_type": "weight",
+      "value": 67.9,
+      "unit": "kg"
+    },
+    {
+      "timestamp": "2026-05-15T08:00",
+      "vital_type": "weight",
+      "value": 68.3,
+      "unit": "kg"
+    },
+    {
+      "timestamp": "2026-05-16T08:00",
+      "vital_type": "weight",
+      "value": 67.7,
+      "unit": "kg"
+    },
+    {
+      "timestamp": "2026-05-17T08:00",
+      "vital_type": "weight",
+      "value": 67.7,
+      "unit": "kg"
+    },
+    {
+      "timestamp": "2026-05-18T08:00",
+      "vital_type": "weight",
+      "value": 67.7,
+      "unit": "kg"
+    },
+    {
+      "timestamp": "2026-05-19T08:00",
+      "vital_type": "weight",
+      "value": 68.0,
+      "unit": "kg"
+    },
+    {
+      "timestamp": "2026-05-20T08:00",
+      "vital_type": "weight",
+      "value": 68.2,
+      "unit": "kg"
+    },
+    {
+      "timestamp": "2026-05-21T08:00",
+      "vital_type": "weight",
+      "value": 68.3,
+      "unit": "kg"
+    },
+    {
+      "timestamp": "2026-05-22T08:00",
+      "vital_type": "weight",
+      "value": 68.4,
+      "unit": "kg"
+    },
+    {
+      "timestamp": "2026-05-23T08:00",
+      "vital_type": "weight",
+      "value": 68.2,
+      "unit": "kg"
+    },
+    {
+      "timestamp": "2026-05-24T08:00",
+      "vital_type": "weight",
+      "value": 68.5,
+      "unit": "kg"
+    },
+    {
+      "timestamp": "2026-05-25T08:00",
+      "vital_type": "weight",
+      "value": 68.5,
+      "unit": "kg"
+    },
+    {
+      "timestamp": "2026-05-26T08:00",
+      "vital_type": "weight",
+      "value": 67.9,
+      "unit": "kg"
+    },
+    {
+      "timestamp": "2026-05-27T08:00",
+      "vital_type": "weight",
+      "value": 67.1,
+      "unit": "kg"
+    },
+    {
+      "timestamp": "2026-05-28T08:00",
+      "vital_type": "weight",
+      "value": 68.2,
+      "unit": "kg"
+    },
+    {
+      "timestamp": "2026-05-29T08:00",
+      "vital_type": "weight",
+      "value": 68.3,
+      "unit": "kg"
+    },
+    {
+      "timestamp": "2026-05-30T08:00",
+      "vital_type": "weight",
+      "value": 67.9,
+      "unit": "kg"
+    },
+    {
+      "timestamp": "2026-05-31T08:00",
+      "vital_type": "weight",
+      "value": 68.6,
+      "unit": "kg"
+    },
+    {
+      "timestamp": "2026-06-01T08:00",
+      "vital_type": "weight",
+      "value": 68.3,
+      "unit": "kg"
+    },
+    {
+      "timestamp": "2026-05-03T08:00",
+      "vital_type": "blood_pressure",
+      "value": 134.6,
+      "unit": "mmHg",
+      "value_secondary": 72.2
+    },
+    {
+      "timestamp": "2026-05-04T08:00",
+      "vital_type": "blood_pressure",
+      "value": 118.7,
+      "unit": "mmHg",
+      "value_secondary": 73.0
+    },
+    {
+      "timestamp": "2026-05-05T08:00",
+      "vital_type": "blood_pressure",
+      "value": 130.3,
+      "unit": "mmHg",
+      "value_secondary": 75.2
+    },
+    {
+      "timestamp": "2026-05-06T08:00",
+      "vital_type": "blood_pressure",
+      "value": 138.8,
+      "unit": "mmHg",
+      "value_secondary": 65.9
+    },
+    {
+      "timestamp": "2026-05-07T08:00",
+      "vital_type": "blood_pressure",
+      "value": 135.9,
+      "unit": "mmHg",
+      "value_secondary": 65.3
+    },
+    {
+      "timestamp": "2026-05-08T08:00",
+      "vital_type": "blood_pressure",
+      "value": 120.4,
+      "unit": "mmHg",
+      "value_secondary": 77.1
+    },
+    {
+      "timestamp": "2026-05-09T08:00",
+      "vital_type": "blood_pressure",
+      "value": 127.4,
+      "unit": "mmHg",
+      "value_secondary": 74.5
+    },
+    {
+      "timestamp": "2026-05-10T08:00",
+      "vital_type": "blood_pressure",
+      "value": 128.7,
+      "unit": "mmHg",
+      "value_secondary": 69.1
+    },
+    {
+      "timestamp": "2026-05-11T08:00",
+      "vital_type": "blood_pressure",
+      "value": 122.2,
+      "unit": "mmHg",
+      "value_secondary": 73.0
+    },
+    {
+      "timestamp": "2026-05-12T08:00",
+      "vital_type": "blood_pressure",
+      "value": 127.4,
+      "unit": "mmHg",
+      "value_secondary": 67.2
+    },
+    {
+      "timestamp": "2026-05-13T08:00",
+      "vital_type": "blood_pressure",
+      "value": 130.1,
+      "unit": "mmHg",
+      "value_secondary": 75.4
+    },
+    {
+      "timestamp": "2026-05-14T08:00",
+      "vital_type": "blood_pressure",
+      "value": 137.5,
+      "unit": "mmHg",
+      "value_secondary": 69.0
+    },
+    {
+      "timestamp": "2026-05-15T08:00",
+      "vital_type": "blood_pressure",
+      "value": 134.6,
+      "unit": "mmHg",
+      "value_secondary": 68.1
+    },
+    {
+      "timestamp": "2026-05-16T08:00",
+      "vital_type": "blood_pressure",
+      "value": 122.8,
+      "unit": "mmHg",
+      "value_secondary": 66.1
+    },
+    {
+      "timestamp": "2026-05-17T08:00",
+      "vital_type": "blood_pressure",
+      "value": 126.1,
+      "unit": "mmHg",
+      "value_secondary": 71.6
+    },
+    {
+      "timestamp": "2026-05-18T08:00",
+      "vital_type": "blood_pressure",
+      "value": 128.2,
+      "unit": "mmHg",
+      "value_secondary": 65.6
+    },
+    {
+      "timestamp": "2026-05-19T08:00",
+      "vital_type": "blood_pressure",
+      "value": 121.9,
+      "unit": "mmHg",
+      "value_secondary": 69.7
+    },
+    {
+      "timestamp": "2026-05-20T08:00",
+      "vital_type": "blood_pressure",
+      "value": 122.5,
+      "unit": "mmHg",
+      "value_secondary": 81.1
+    },
+    {
+      "timestamp": "2026-05-21T08:00",
+      "vital_type": "blood_pressure",
+      "value": 125.0,
+      "unit": "mmHg",
+      "value_secondary": 71.8
+    },
+    {
+      "timestamp": "2026-05-22T08:00",
+      "vital_type": "blood_pressure",
+      "value": 127.0,
+      "unit": "mmHg",
+      "value_secondary": 70.0
+    },
+    {
+      "timestamp": "2026-05-23T08:00",
+      "vital_type": "blood_pressure",
+      "value": 123.2,
+      "unit": "mmHg",
+      "value_secondary": 77.8
+    },
+    {
+      "timestamp": "2026-05-24T08:00",
+      "vital_type": "blood_pressure",
+      "value": 133.2,
+      "unit": "mmHg",
+      "value_secondary": 71.1
+    },
+    {
+      "timestamp": "2026-05-25T08:00",
+      "vital_type": "blood_pressure",
+      "value": 131.2,
+      "unit": "mmHg",
+      "value_secondary": 68.1
+    },
+    {
+      "timestamp": "2026-05-26T08:00",
+      "vital_type": "blood_pressure",
+      "value": 130.0,
+      "unit": "mmHg",
+      "value_secondary": 66.2
+    },
+    {
+      "timestamp": "2026-05-27T08:00",
+      "vital_type": "blood_pressure",
+      "value": 118.3,
+      "unit": "mmHg",
+      "value_secondary": 73.3
+    },
+    {
+      "timestamp": "2026-05-28T08:00",
+      "vital_type": "blood_pressure",
+      "value": 118.7,
+      "unit": "mmHg",
+      "value_secondary": 70.3
+    },
+    {
+      "timestamp": "2026-05-29T08:00",
+      "vital_type": "blood_pressure",
+      "value": 123.0,
+      "unit": "mmHg",
+      "value_secondary": 78.6
+    },
+    {
+      "timestamp": "2026-05-30T08:00",
+      "vital_type": "blood_pressure",
+      "value": 130.0,
+      "unit": "mmHg",
+      "value_secondary": 72.2
+    },
+    {
+      "timestamp": "2026-05-31T08:00",
+      "vital_type": "blood_pressure",
+      "value": 128.6,
+      "unit": "mmHg",
+      "value_secondary": 68.4
+    },
+    {
+      "timestamp": "2026-06-01T08:00",
+      "vital_type": "blood_pressure",
+      "value": 127.6,
+      "unit": "mmHg",
+      "value_secondary": 69.7
+    }
+  ]
+}

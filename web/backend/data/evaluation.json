@@ -1,0 +1,152 @@
+{
+  "scenarios": [
+    {
+      "final_urgency": "Urgent",
+      "acceptable_urgencies": [
+        "Urgent",
+        "Critical"
+      ],
+      "urgency_ok": true,
+      "must_include_coverage": 0.667,
+      "must_include_missing": [
+        "stopped|discontinu|self-discontinu|non-adher"
+      ],
+      "must_flag_coverage": 1.0,
+      "must_flag_missing": [],
+      "must_avoid_violations": [],
+      "citation_coverage": 1.0,
+      "citations_cited": 5,
+      "citations_total": 5,
+      "hallucinated_citations": [],
+      "hallucination_count": 0,
+      "latency_seconds": 35.66,
+      "errors": 0,
+      "passed": true,
+      "scenario_id": "missed_medication",
+      "title": "The Missed Medication",
+      "patient_id": "PT-001",
+      "expected_urgency": "Urgent"
+    },
+    {
+      "final_urgency": "Routine",
+      "acceptable_urgencies": [
+        "Routine",
+        "Informational"
+      ],
+      "urgency_ok": true,
+      "must_include_coverage": 0.667,
+      "must_include_missing": [
+        "single|isolated|one reading|one-off"
+      ],
+      "must_flag_coverage": 0.0,
+      "must_flag_missing": [
+        "follow-up|recheck|confirm|repeat"
+      ],
+      "must_avoid_violations": [],
+      "citation_coverage": 1.0,
+      "citations_cited": 5,
+      "citations_total": 5,
+      "hallucinated_citations": [],
+      "hallucination_count": 0,
+      "latency_seconds": 26.53,
+      "errors": 0,
+      "passed": true,
+      "scenario_id": "false_alarm",
+      "title": "The False Alarm",
+      "patient_id": "PT-002",
+      "expected_urgency": "Routine"
+    },
+    {
+      "final_urgency": "Urgent",
+      "acceptable_urgencies": [
+        "Urgent",
+        "Critical"
+      ],
+      "urgency_ok": true,
+      "must_include_coverage": 1.0,
+      "must_include_missing": [],
+      "must_flag_coverage": 0.0,
+      "must_flag_missing": [
+        "lab|electrolyte|renal|kidney"
+      ],
+      "must_avoid_violations": [],
+      "citation_coverage": 1.0,
+      "citations_cited": 5,
+      "citations_total": 5,
+      "hallucinated_citations": [],
+      "hallucination_count": 0,
+      "latency_seconds": 27.26,
+      "errors": 0,
+      "passed": true,
+      "scenario_id": "silent_deterioration",
+      "title": "The Silent Deterioration",
+      "patient_id": "PT-003",
+      "expected_urgency": "Urgent"
+    },
+    {
+      "final_urgency": "Urgent",
+      "acceptable_urgencies": [
+        "Routine",
+        "Urgent"
+      ],
+      "urgency_ok": true,
+      "must_include_coverage": 0.667,
+      "must_include_missing": [
+        "restart|resume|reinitiat|re-establish|reestablish"
+      ],
+      "must_flag_coverage": 1.0,
+      "must_flag_missing": [],
+      "must_avoid_violations": [],
+      "citation_coverage": 1.0,
+      "citations_cited": 5,
+      "citations_total": 5,
+      "hallucinated_citations": [],
+      "hallucination_count": 0,
+      "latency_seconds": 21.71,
+      "errors": 0,
+      "passed": true,
+      "scenario_id": "incomplete_record",
+      "title": "The Incomplete Record",
+      "patient_id": "PT-004",
+      "expected_urgency": "Routine"
+    },
+    {
+      "final_urgency": "Urgent",
+      "acceptable_urgencies": [
+        "Urgent",
+        "Critical"
+      ],
+      "urgency_ok": true,
+      "must_include_coverage": 0.667,
+      "must_include_missing": [
+        "salad|vitamin k|leafy green|kale|spinach"
+      ],
+      "must_flag_coverage": 1.0,
+      "must_flag_missing": [],
+      "must_avoid_violations": [],
+      "citation_coverage": 1.0,
+      "citations_cited": 4,
+      "citations_total": 4,
+      "hallucinated_citations": [],
+      "hallucination_count": 0,
+      "latency_seconds": 23.61,
+      "errors": 0,
+      "passed": true,
+      "scenario_id": "conflicting_data",
+      "title": "The Conflicting Data",
+      "patient_id": "PT-005",
+      "expected_urgency": "Urgent"
+    }
+  ],
+  "aggregate": {
+    "scenarios": 5,
+    "pass_rate": 1.0,
+    "urgency_accuracy": 1.0,
+    "mean_must_include_coverage": 0.734,
+    "mean_citation_coverage": 1.0,
+    "total_hallucinated_citations": 0,
+    "total_must_avoid_violations": 0,
+    "mean_latency_seconds": 26.95,
+    "total_errors": 0
+  }
+}

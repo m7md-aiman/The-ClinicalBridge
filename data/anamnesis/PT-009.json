@@ -1,0 +1,32 @@
+{
+  "patient_id": "PT-009",
+  "intake_date": "2026-05-12",
+  "chief_complaint": "Cardiac follow-up.",
+  "history_of_present_illness": "Mr. Mueller is doing well, walking 2 miles daily without chest pain.",
+  "review_of_systems": {
+    "cardiovascular": "No chest pain, no dyspnea, no palpitations."
+  },
+  "social_history": {
+    "smoking": "Former, quit after MI",
+    "alcohol": "Rare",
+    "diet": "Mediterranean",
+    "exercise": "Walks 2 miles/day",
+    "occupation": "Retired engineer",
+    "living_situation": "Lives with spouse"
+  },
+  "family_history": [
+    "Father: MI at 60"
+  ],
+  "medication_adherence": [
+    {
+      "medication": "Aspirin",
+      "reported_status": "adherent",
+      "detail": "Daily."
+    }
+  ],
+  "symptom_diary": [],
+  "patient_concerns": [
+    "Wants to keep his heart healthy and avoid another heart attack."
+  ],
+  "sensitive_notes": []
+}

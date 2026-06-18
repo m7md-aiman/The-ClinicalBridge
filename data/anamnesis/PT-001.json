@@ -1,0 +1,54 @@
+{
+  "patient_id": "PT-001",
+  "intake_date": "2026-05-30",
+  "chief_complaint": "High blood pressure readings at home.",
+  "history_of_present_illness": "Mr. Whitfield reports his home blood pressure has been 'creeping up' over the last two weeks. About two weeks ago he stopped taking his blood pressure pill because he developed 'an annoying dry tickle in my throat' and a persistent dry cough that kept him up at night. He read online that the cough could be from the pill, so he quit it on his own and did not tell anyone. He continues his cholesterol medication.",
+  "review_of_systems": {
+    "cardiovascular": "Denies chest pain, palpitations, leg swelling.",
+    "respiratory": "Persistent dry cough for ~3 weeks, no sputum, no fever.",
+    "neurological": "No headache, no vision changes, no weakness."
+  },
+  "social_history": {
+    "smoking": "Former smoker, quit 2005",
+    "alcohol": "1-2 beers/week",
+    "diet": "Adds salt to most meals",
+    "exercise": "Walks dog 20 min/day",
+    "occupation": "Retired postal worker",
+    "living_situation": "Lives with spouse"
+  },
+  "family_history": [
+    "Father: stroke at 70",
+    "Mother: hypertension"
+  ],
+  "medication_adherence": [
+    {
+      "medication": "Lisinopril",
+      "reported_status": "non_adherent",
+      "detail": "Self-discontinued ~2 weeks ago due to dry cough."
+    },
+    {
+      "medication": "Atorvastatin",
+      "reported_status": "adherent",
+      "detail": "Takes nightly as prescribed."
+    }
+  ],
+  "symptom_diary": [
+    {
+      "date": "2026-05-20",
+      "entry": "That tickly cough is back again at night. Stopped the little white pill to see if it helps."
+    },
+    {
+      "date": "2026-05-27",
+      "entry": "Cough a bit better but my home monitor said 168 over 100. Felt fine though."
+    },
+    {
+      "date": "2026-05-31",
+      "entry": "Monitor read 176/103 this morning. No headache. Should I worry?"
+    }
+  ],
+  "patient_concerns": [
+    "Worried the cough means something serious.",
+    "Wants to know if there is a BP medicine that won't cause a cough."
+  ],
+  "sensitive_notes": []
+}

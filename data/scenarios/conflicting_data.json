@@ -1,0 +1,129 @@
+{
+  "id": "conflicting_data",
+  "title": "The Conflicting Data",
+  "patient_id": "PT-005",
+  "description": "The patient reports full medication adherence, but lab results show sub-therapeutic drug levels \u2014 the system must flag the discrepancy without making accusations.",
+  "expected_urgency": "Urgent",
+  "alert": {
+    "alert_id": "ALERT-PT-005",
+    "patient_id": "PT-005",
+    "timestamp": "2026-06-01T08:00:00",
+    "device_type": "Apple Watch",
+    "reading": {
+      "vital_type": "heart_rate",
+      "value": 124.0,
+      "value_secondary": null,
+      "unit": "bpm"
+    },
+    "device_alert_category": "HR_HIGH",
+    "baseline_value": 76.0,
+    "thresholds": {
+      "vital_type": "heart_rate",
+      "low": 50.0,
+      "high": 110.0,
+      "unit": "bpm"
+    },
+    "notes": "Recent episodes of palpitations with heart rate up to 132 bpm."
+  },
+  "rubric": {
+    "acceptable_urgencies": [
+      "Urgent",
+      "Critical"
+    ],
+    "must_include": [
+      "inr",
+      "warfarin",
+      "salad|vitamin k|leafy green|kale|spinach"
+    ],
+    "must_flag": [
+      "without assuming|neutral|non-judgment|cannot be confirmed|plausible|may be"
+    ],
+    "must_avoid": [
+      "lying",
+      "accus",
+      "dishonest"
+    ]
+  },
+  "gold_brief": {
+    "patient_id": "PT-005",
+    "generated_at": "2026-06-01T08:00:00",
+    "alert_summary": "Heart rate 124 bpm (recent episodes up to 132 bpm), above the 110 bpm threshold, in a patient with atrial fibrillation. Classified Urgent.",
+    "urgency": "Urgent",
+    "patient_snapshot": "65-year-old man with atrial fibrillation and hypertension on warfarin 5 mg daily and metoprolol succinate 50 mg daily.",
+    "contextual_analysis": [
+      {
+        "statement": "Recent palpitations with heart rate up to 132 bpm suggest episodes of atrial fibrillation with rapid ventricular response.",
+        "sources": [
+          "RPM alert",
+          "Anamnesis:PT-005/diary",
+          "Anamnesis:PT-005/ros"
+        ]
+      },
+      {
+        "statement": "INR has been persistently sub-therapeutic (1.3-1.5; target 2.0-3.0) over the past month even though the patient reports taking warfarin every day \u2014 a discrepancy between self-report and the lab data.",
+        "sources": [
+          "EHR:PT-005/labs",
+          "Anamnesis:PT-005/adherence"
+        ]
+      },
+      {
+        "statement": "He recently began eating large daily kale-and-spinach salads; this added dietary vitamin K can lower INR and may explain the discrepancy without suggesting missed doses.",
+        "sources": [
+          "Anamnesis:PT-005/hpi",
+          "Anamnesis:PT-005/diary"
+        ]
+      }
+    ],
+    "risk_assessment": [
+      {
+        "statement": "Sub-therapeutic anticoagulation in atrial fibrillation substantially raises stroke risk.",
+        "sources": [
+          "EHR:PT-005/problem_list",
+          "EHR:PT-005/labs"
+        ]
+      },
+      {
+        "statement": "Poorly controlled ventricular rate may worsen symptoms and, if persistent, cardiac function.",
+        "sources": [
+          "RPM alert"
+        ]
+      }
+    ],
+    "recommended_actions": [
+      {
+        "action": "Review anticoagulation: the low INR is plausibly explained by increased dietary vitamin K rather than missed doses \u2014 discuss diet and adjust warfarin dosing and monitoring accordingly.",
+        "confidence": "High",
+        "supporting_evidence": [
+          "EHR:PT-005/labs",
+          "Anamnesis:PT-005/hpi"
+        ]
+      },
+      {
+        "action": "Assess and optimize rate control given recurrent rapid-response episodes.",
+        "confidence": "High",
+        "supporting_evidence": [
+          "RPM alert"
+        ]
+      },
+      {
+        "action": "Repeat INR and arrange close anticoagulation follow-up.",
+        "confidence": "Moderate",
+        "supporting_evidence": [
+          "EHR:PT-005/labs"
+        ]
+      }
+    ],
+    "uncertainties_and_gaps": [
+      "The cause of the low INR cannot be confirmed from the available data; dietary vitamin K is a plausible explanation alongside possible dosing factors \u2014 present this neutrally, without assuming the patient is at fault."
+    ],
+    "overall_confidence": "High",
+    "cited_sources": [
+      "RPM alert",
+      "EHR:PT-005/problem_list",
+      "EHR:PT-005/labs",
+      "Anamnesis:PT-005/hpi",
+      "Anamnesis:PT-005/adherence",
+      "Anamnesis:PT-005/diary"
+    ]
+  }
+}

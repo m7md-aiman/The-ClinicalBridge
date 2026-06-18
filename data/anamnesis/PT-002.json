@@ -1,0 +1,52 @@
+{
+  "patient_id": "PT-002",
+  "intake_date": "2026-05-31",
+  "chief_complaint": "One high sugar reading this morning.",
+  "history_of_present_illness": "Ms. Delgado got a fasting glucose of 247 this morning, higher than her usual 120-150. She notes she started a strict low-carb (keto) diet about a week ago on her doctor's encouragement and yesterday was a celebration where she 'had a big slice of birthday cake and some juice.' She also started a new diabetes pill two weeks ago. She feels completely well, no symptoms.",
+  "review_of_systems": {
+    "constitutional": "Feels well, no excessive thirst or urination today.",
+    "endocrine": "Denies blurred vision, no recent infections."
+  },
+  "social_history": {
+    "smoking": "Never",
+    "alcohol": "Rare",
+    "diet": "Started keto diet ~1 week ago",
+    "exercise": "Walks 30 min 4x/week",
+    "occupation": "Schoolteacher",
+    "living_situation": "Lives with husband and two children"
+  },
+  "family_history": [
+    "Mother: type 2 diabetes",
+    "Father: hypertension"
+  ],
+  "medication_adherence": [
+    {
+      "medication": "Metformin",
+      "reported_status": "adherent",
+      "detail": "Takes twice daily."
+    },
+    {
+      "medication": "Empagliflozin",
+      "reported_status": "adherent",
+      "detail": "Started two weeks ago, taking as directed."
+    }
+  ],
+  "symptom_diary": [
+    {
+      "date": "2026-05-25",
+      "entry": "Started the new low-carb diet. Sugars have been great, mostly 110-130!"
+    },
+    {
+      "date": "2026-05-30",
+      "entry": "It was my niece's birthday \u2014 had cake and a glass of juice. Worth it!"
+    },
+    {
+      "date": "2026-05-31",
+      "entry": "Whoa, meter said 247 this morning. Must be the cake. Feel totally fine."
+    }
+  ],
+  "patient_concerns": [
+    "Wonders if one high reading after a birthday means her diabetes is out of control."
+  ],
+  "sensitive_notes": []
+}

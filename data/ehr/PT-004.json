@@ -1,0 +1,28 @@
+{
+  "patient_id": "PT-004",
+  "name": "Priya Anand",
+  "date_of_birth": "1965-05-30",
+  "age": 61,
+  "sex": "female",
+  "mrn": "MRN-004",
+  "problem_list": [
+    {
+      "condition": "Hypertension (per patient report; records pending)",
+      "icd10": "I10",
+      "status": "active",
+      "onset_date": "unknown"
+    }
+  ],
+  "medications": [],
+  "allergies": [],
+  "lab_results": [],
+  "visit_notes": [
+    {
+      "date": "2026-05-29",
+      "author": "Intake Clerk",
+      "specialty": "Administration",
+      "note": "New patient, transferred from out-of-state. Outside records requested but not yet received. Medication list and labs unavailable in system."
+    }
+  ],
+  "record_completeness": "sparse"
+}

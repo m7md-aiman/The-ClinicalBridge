@@ -1,0 +1,198 @@
+{
+  "patient_id": "PT-007",
+  "monitoring_start": "2026-05-03",
+  "monitoring_end": "2026-06-01",
+  "reading_frequency": "daily",
+  "vitals": [
+    {
+      "vital_type": "blood_glucose",
+      "unit": "mg/dL",
+      "device": "Dexcom CGM",
+      "baseline": 130,
+      "threshold_low": 70,
+      "threshold_high": 250
+    }
+  ],
+  "readings": [
+    {
+      "timestamp": "2026-05-03T08:00",
+      "vital_type": "blood_glucose",
+      "value": 104.6,
+      "unit": "mg/dL"
+    },
+    {
+      "timestamp": "2026-05-04T08:00",
+      "vital_type": "blood_glucose",
+      "value": 172.6,
+      "unit": "mg/dL"
+    },
+    {
+      "timestamp": "2026-05-05T08:00",
+      "vital_type": "blood_glucose",
+      "value": 147.6,
+      "unit": "mg/dL"
+    },
+    {
+      "timestamp": "2026-05-06T08:00",
+      "vital_type": "blood_glucose",
+      "value": 161.3,
+      "unit": "mg/dL"
+    },
+    {
+      "timestamp": "2026-05-07T08:00",
+      "vital_type": "blood_glucose",
+      "value": 105.5,
+      "unit": "mg/dL"
+    },
+    {
+      "timestamp": "2026-05-08T08:00",
+      "vital_type": "blood_glucose",
+      "value": 134.8,
+      "unit": "mg/dL"
+    },
+    {
+      "timestamp": "2026-05-09T08:00",
+      "vital_type": "blood_glucose",
+      "value": 161.8,
+      "unit": "mg/dL"
+    },
+    {
+      "timestamp": "2026-05-10T08:00",
+      "vital_type": "blood_glucose",
+      "value": 168.7,
+      "unit": "mg/dL"
+    },
+    {
+      "timestamp": "2026-05-11T08:00",
+      "vital_type": "blood_glucose",
+      "value": 132.8,
+      "unit": "mg/dL"
+    },
+    {
+      "timestamp": "2026-05-12T08:00",
+      "vital_type": "blood_glucose",
+      "value": 154.4,
+      "unit": "mg/dL"
+    },
+    {
+      "timestamp": "2026-05-13T08:00",
+      "vital_type": "blood_glucose",
+      "value": 156.9,
+      "unit": "mg/dL"
+    },
+    {
+      "timestamp": "2026-05-14T08:00",
+      "vital_type": "blood_glucose",
+      "value": 161.3,
+      "unit": "mg/dL"
+    },
+    {
+      "timestamp": "2026-05-15T08:00",
+      "vital_type": "blood_glucose",
+      "value": 155.4,
+      "unit": "mg/dL"
+    },
+    {
+      "timestamp": "2026-05-16T08:00",
+      "vital_type": "blood_glucose",
+      "value": 184.6,
+      "unit": "mg/dL"
+    },
+    {
+      "timestamp": "2026-05-17T08:00",
+      "vital_type": "blood_glucose",
+      "value": 131.2,
+      "unit": "mg/dL"
+    },
+    {
+      "timestamp": "2026-05-18T08:00",
+      "vital_type": "blood_glucose",
+      "value": 150.9,
+      "unit": "mg/dL"
+    },
+    {
+      "timestamp": "2026-05-19T08:00",
+      "vital_type": "blood_glucose",
+      "value": 156.7,
+      "unit": "mg/dL"
+    },
+    {
+      "timestamp": "2026-05-20T08:00",
+      "vital_type": "blood_glucose",
+      "value": 102.6,
+      "unit": "mg/dL"
+    },
+    {
+      "timestamp": "2026-05-21T08:00",
+      "vital_type": "blood_glucose",
+      "value": 84.5,
+      "unit": "mg/dL"
+    },
+    {
+      "timestamp": "2026-05-22T08:00",
+      "vital_type": "blood_glucose",
+      "value": 136.9,
+      "unit": "mg/dL"
+    },
+    {
+      "timestamp": "2026-05-23T08:00",
+      "vital_type": "blood_glucose",
+      "value": 158.6,
+      "unit": "mg/dL"
+    },
+    {
+      "timestamp": "2026-05-24T08:00",
+      "vital_type": "blood_glucose",
+      "value": 104.1,
+      "unit": "mg/dL"
+    },
+    {
+      "timestamp": "2026-05-25T08:00",
+      "vital_type": "blood_glucose",
+      "value": 140.4,
+      "unit": "mg/dL"
+    },
+    {
+      "timestamp": "2026-05-26T08:00",
+      "vital_type": "blood_glucose",
+      "value": 92.5,
+      "unit": "mg/dL"
+    },
+    {
+      "timestamp": "2026-05-27T08:00",
+      "vital_type": "blood_glucose",
+      "value": 119.8,
+      "unit": "mg/dL"
+    },
+    {
+      "timestamp": "2026-05-28T08:00",
+      "vital_type": "blood_glucose",
+      "value": 97.2,
+      "unit": "mg/dL"
+    },
+    {
+      "timestamp": "2026-05-29T08:00",
+      "vital_type": "blood_glucose",
+      "value": 130.9,
+      "unit": "mg/dL"
+    },
+    {
+      "timestamp": "2026-05-30T08:00",
+      "vital_type": "blood_glucose",
+      "value": 162.3,
+      "unit": "mg/dL"
+    },
+    {
+      "timestamp": "2026-05-31T08:00",
+      "vital_type": "blood_glucose",
+      "value": 107.6,
+      "unit": "mg/dL"
+    },
+    {
+      "timestamp": "2026-06-01T08:00",
+      "vital_type": "blood_glucose",
+      "value": 122.2,
+      "unit": "mg/dL"
+    }
+  ]
+}

@@ -1,0 +1,48 @@
+{
+  "patient_id": "PT-005",
+  "intake_date": "2026-05-29",
+  "chief_complaint": "Routine check; occasional fluttering.",
+  "history_of_present_illness": "Mr. Foster reports he takes his blood thinner 'every single day, never miss a dose' and is confused why his levels are low. He mentions he recently started eating a large kale-and-spinach salad daily for his health. He had a couple of episodes of his heart 'racing and fluttering' over the last two days.",
+  "review_of_systems": {
+    "cardiovascular": "Two episodes of palpitations in 48h, brief. No chest pain, no syncope.",
+    "constitutional": "Feels well otherwise."
+  },
+  "social_history": {
+    "smoking": "Never",
+    "alcohol": "1 glass wine/day",
+    "diet": "Recently started large daily leafy-green salads",
+    "exercise": "Golf weekly",
+    "occupation": "Retired engineer",
+    "living_situation": "Lives with spouse"
+  },
+  "family_history": [
+    "Father: atrial fibrillation"
+  ],
+  "medication_adherence": [
+    {
+      "medication": "Warfarin",
+      "reported_status": "adherent",
+      "detail": "Patient insists he takes it daily without missing."
+    },
+    {
+      "medication": "Metoprolol succinate",
+      "reported_status": "adherent",
+      "detail": "Daily."
+    }
+  ],
+  "symptom_diary": [
+    {
+      "date": "2026-05-20",
+      "entry": "Started having a big healthy salad every day \u2014 kale, spinach, the works."
+    },
+    {
+      "date": "2026-05-30",
+      "entry": "Heart did that fluttering thing again for a minute. Watch said 132."
+    }
+  ],
+  "patient_concerns": [
+    "Frustrated and a little offended that the clinic keeps asking if he takes his pills.",
+    "Wants to know why his numbers are off if he's doing everything right."
+  ],
+  "sensitive_notes": []
+}

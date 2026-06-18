@@ -1,0 +1,51 @@
+{
+  "patient_id": "PT-010",
+  "name": "Tina Robinson",
+  "date_of_birth": "1978-04-17",
+  "age": 48,
+  "sex": "female",
+  "mrn": "MRN-010",
+  "problem_list": [
+    {
+      "condition": "Type 2 diabetes mellitus without complications",
+      "icd10": "E11.9",
+      "status": "active",
+      "onset_date": "2021-09-09"
+    },
+    {
+      "condition": "Obesity",
+      "icd10": "E66.9",
+      "status": "active",
+      "onset_date": "2015-01-01"
+    }
+  ],
+  "medications": [
+    {
+      "name": "Metformin",
+      "dose": "500 mg",
+      "frequency": "twice daily",
+      "started": "2021-09-09",
+      "status": "active"
+    }
+  ],
+  "allergies": [],
+  "lab_results": [
+    {
+      "test": "Hemoglobin A1c",
+      "value": "8.1",
+      "unit": "%",
+      "reference_range": "<7.0",
+      "date": "2026-04-28",
+      "flag": "high"
+    }
+  ],
+  "visit_notes": [
+    {
+      "date": "2026-04-28",
+      "author": "Dr. Nguyen",
+      "specialty": "Primary Care",
+      "note": "48F T2DM, A1c 8.1 above goal. Discussed intensifying therapy and lifestyle. Patient hesitant to add medication."
+    }
+  ],
+  "record_completeness": "complete"
+}

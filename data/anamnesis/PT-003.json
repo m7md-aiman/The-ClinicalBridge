@@ -1,0 +1,58 @@
+{
+  "patient_id": "PT-003",
+  "intake_date": "2026-05-31",
+  "chief_complaint": "Shoes feel tight and a bit more short of breath.",
+  "history_of_present_illness": "Mr. Brennan reports that over the past 10-14 days his shoes and socks have felt tighter and his ankles look 'puffy' by evening. He is sleeping on two pillows now instead of one because he feels 'a little winded' lying flat. He has not missed any medications. He thought it was just the warm weather.",
+  "review_of_systems": {
+    "cardiovascular": "Bilateral ankle swelling, worse in evening. No chest pain.",
+    "respiratory": "Mild exertional dyspnea, new two-pillow orthopnea.",
+    "constitutional": "Feels more fatigued than usual."
+  },
+  "social_history": {
+    "smoking": "Former, quit 1998",
+    "alcohol": "None",
+    "diet": "Admits to takeout/Chinese food twice this week (salty)",
+    "exercise": "Limited by fatigue",
+    "occupation": "Retired teacher",
+    "living_situation": "Lives alone, daughter nearby"
+  },
+  "family_history": [
+    "Father: MI at 65"
+  ],
+  "medication_adherence": [
+    {
+      "medication": "Furosemide",
+      "reported_status": "adherent",
+      "detail": "Takes every morning."
+    },
+    {
+      "medication": "Carvedilol",
+      "reported_status": "adherent",
+      "detail": "Twice daily."
+    },
+    {
+      "medication": "Sacubitril-valsartan",
+      "reported_status": "adherent",
+      "detail": "Twice daily."
+    }
+  ],
+  "symptom_diary": [
+    {
+      "date": "2026-05-22",
+      "entry": "Ankles a little puffy tonight. Probably the heat."
+    },
+    {
+      "date": "2026-05-27",
+      "entry": "Had Chinese takeout. Socks left big marks on my legs."
+    },
+    {
+      "date": "2026-05-31",
+      "entry": "Using two pillows now to breathe easier. Scale keeps going up a little each day."
+    }
+  ],
+  "patient_concerns": [
+    "Thinks it might just be the hot weather.",
+    "Does not want to go to the hospital."
+  ],
+  "sensitive_notes": []
+}

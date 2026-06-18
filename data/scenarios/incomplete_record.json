@@ -1,0 +1,111 @@
+{
+  "id": "incomplete_record",
+  "title": "The Incomplete Record",
+  "patient_id": "PT-004",
+  "description": "A patient transfers from another system; the EHR is sparse, so the system must rely heavily on anamnesis data while clearly flagging the gaps.",
+  "expected_urgency": "Routine",
+  "alert": {
+    "alert_id": "ALERT-PT-004",
+    "patient_id": "PT-004",
+    "timestamp": "2026-06-01T08:00:00",
+    "device_type": "loaner BP cuff",
+    "reading": {
+      "vital_type": "blood_pressure",
+      "value": 165.0,
+      "value_secondary": 94.9,
+      "unit": "mmHg"
+    },
+    "device_alert_category": "BP_HIGH",
+    "baseline_value": null,
+    "thresholds": {
+      "vital_type": "blood_pressure",
+      "low": 90.0,
+      "high": 140.0,
+      "unit": "mmHg"
+    },
+    "notes": "Newly transferred patient; no established baseline on file."
+  },
+  "rubric": {
+    "acceptable_urgencies": [
+      "Routine",
+      "Urgent"
+    ],
+    "must_include": [
+      "records|documentation|outside|history",
+      "unknown|unspecified|unable",
+      "restart|resume|reinitiat|re-establish|reestablish"
+    ],
+    "must_flag": [
+      "sparse|incomplete|missing|not received|unavailable"
+    ],
+    "must_avoid": []
+  },
+  "gold_brief": {
+    "patient_id": "PT-004",
+    "generated_at": "2026-06-01T08:00:00",
+    "alert_summary": "Blood pressure 165/94.9 mmHg on a loaner cuff, above the 140/90 threshold. Baseline unknown \u2014 this is a newly transferred patient. Classified Routine pending more data.",
+    "urgency": "Routine",
+    "patient_snapshot": "61-year-old woman establishing care after an out-of-state move. Reports long-standing hypertension, but outside records have not yet arrived; no medications, labs, or confirmed history are in the system.",
+    "contextual_analysis": [
+      {
+        "statement": "The patient reports she ran out of her antihypertensives (a 'water pill and a small white tablet') about three weeks ago during the move and has not refilled them.",
+        "sources": [
+          "Anamnesis:PT-004/hpi",
+          "Anamnesis:PT-004/adherence"
+        ]
+      },
+      {
+        "statement": "The elevated reading is consistent with recent cessation of unspecified antihypertensive therapy.",
+        "sources": [
+          "RPM alert",
+          "Anamnesis:PT-004/hpi"
+        ]
+      }
+    ],
+    "risk_assessment": [
+      {
+        "statement": "Uncontrolled hypertension with a family history of stroke warrants timely treatment, though she is currently asymptomatic.",
+        "sources": [
+          "Anamnesis:PT-004/family",
+          "Anamnesis:PT-004/ros"
+        ]
+      }
+    ],
+    "recommended_actions": [
+      {
+        "action": "Establish care: obtain the outside records and reconcile her prior medications.",
+        "confidence": "High",
+        "supporting_evidence": [
+          "EHR:PT-004/visit_note"
+        ]
+      },
+      {
+        "action": "Restart antihypertensive therapy per clinical judgment, since she is currently untreated.",
+        "confidence": "Moderate",
+        "supporting_evidence": [
+          "Anamnesis:PT-004/adherence"
+        ]
+      },
+      {
+        "action": "Confirm home BP monitoring and schedule near-term follow-up.",
+        "confidence": "Moderate",
+        "supporting_evidence": [
+          "RPM alert"
+        ]
+      }
+    ],
+    "uncertainties_and_gaps": [
+      "The EHR is sparse: no medication list, no labs, and no confirmed problem list \u2014 outside records were requested but not received.",
+      "Exact prior medications are unknown (the patient could not name them).",
+      "No reliable baseline blood pressure is available for comparison."
+    ],
+    "overall_confidence": "Moderate",
+    "cited_sources": [
+      "RPM alert",
+      "EHR:PT-004/visit_note",
+      "Anamnesis:PT-004/hpi",
+      "Anamnesis:PT-004/adherence",
+      "Anamnesis:PT-004/family"
+    ]
+  }
+}

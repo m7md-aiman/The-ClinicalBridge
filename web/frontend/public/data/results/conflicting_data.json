@@ -1,0 +1,402 @@
+{
+  "scenario": {
+    "id": "conflicting_data",
+    "title": "The Conflicting Data",
+    "lesson": "The patient reports full medication adherence, but lab results show sub-therapeutic drug levels \u2014 the system must flag the discrepancy without making accusations.",
+    "expected_urgency": "Urgent",
+    "patient_id": "PT-005",
+    "alert": {
+      "alert_id": "ALERT-PT-005",
+      "patient_id": "PT-005",
+      "timestamp": "2026-06-01T08:00:00",
+      "device_type": "Apple Watch",
+      "reading": {
+        "vital_type": "heart_rate",
+        "value": 124.0,
+        "value_secondary": null,
+        "unit": "bpm"
+      },
+      "device_alert_category": "HR_HIGH",
+      "baseline_value": 76.0,
+      "thresholds": {
+        "vital_type": "heart_rate",
+        "low": 50.0,
+        "high": 110.0,
+        "unit": "bpm"
+      },
+      "notes": "Recent episodes of palpitations with heart rate up to 132 bpm."
+    },
+    "alert_display": "124 bpm",
+    "alert_category": "HR_HIGH"
+  },
+  "result": {
+    "alert_id": "ALERT-PT-005",
+    "patient_id": "PT-005",
+    "final_urgency": "Urgent",
+    "escalated": false,
+    "deterministic_severity": {
+      "severity": "urgent",
+      "urgency": "Urgent",
+      "rationale": "Heart rate 124 bpm (>150/<40 critical, >120 urgent, > threshold routine)."
+    },
+    "errors": [],
+    "triage": {
+      "patient_id": "PT-005",
+      "urgency": "Urgent",
+      "clinical_question": "What is causing this patient's elevated heart rate of 124 bpm, and are there any underlying issues contributing to the recent palpitations?",
+      "reasoning": "The measured heart rate of 124 bpm is significantly above the threshold high of 110 bpm and the patient's baseline of 76 bpm, and the notes indicate recent episodes of palpitations, warranting same-day clinical review without immediate life threat.",
+      "requires_immediate_escalation": false,
+      "ehr_query": {
+        "focus_terms": [
+          "tachycardia",
+          "palpitations",
+          "cardiac conditions",
+          "recent heart rate readings"
+        ],
+        "rationale": "These terms are essential to understand the patient's cardiac status and any potential underlying conditions contributing to the elevated heart rate."
+      },
+      "anamnesis_query": {
+        "focus_terms": [
+          "recent symptoms",
+          "stress levels",
+          "medication adherence",
+          "caffeine intake"
+        ],
+        "rationale": "These topics will help assess potential triggers or contributing factors to the patient's elevated heart rate and palpitations."
+      }
+    },
+    "ehr_context": {
+      "patient_id": "PT-005",
+      "problem_list": [
+        {
+          "condition": "Atrial fibrillation",
+          "icd10_code": "I48.91",
+          "status": "active",
+          "onset_date": "2021-03-04",
+          "source_ref": "EHR:PT-005/problem_list"
+        }
+      ],
+      "medications": [
+        {
+          "name": "Warfarin",
+          "dose": "5 mg",
+          "frequency": "once daily",
+          "status": "active",
+          "source_ref": "EHR:PT-005/medications"
+        }
+      ],
+      "lab_results": [
+        {
+          "test_name": "INR",
+          "value": "1.4 ratio",
+          "unit": null,
+          "reference_range": "2.0-3.0 (target)",
+          "date": "2026-04-30",
+          "trend": null,
+          "flag": "low",
+          "source_ref": "EHR:PT-005/labs"
+        }
+      ],
+      "visit_notes": [],
+      "retrieval_confidence": 0.8,
+      "missing_data_flags": [
+        "Recent heart rate readings not available.",
+        "No visit notes related to palpitations or tachycardia."
+      ],
+      "source_documents": [
+        "EHR:PT-005/problem_list",
+        "EHR:PT-005/labs",
+        "EHR:PT-005/medications"
+      ]
+    },
+    "anamnesis_summary": {
+      "patient_id": "PT-005",
+      "reported_symptoms": [
+        {
+          "symptom": "palpitations",
+          "onset": "over the last two days",
+          "progression": "two episodes in 48 hours",
+          "patient_words": "heart 'racing and fluttering'",
+          "clinical_interpretation": "episodes of palpitations, possibly related to anxiety or dietary changes",
+          "source_ref": "Anamnesis:PT-005/hpi"
+        },
+        {
+          "symptom": "elevated heart rate",
+          "onset": "not specified",
+          "progression": "recorded at 132 bpm during an episode",
+          "patient_words": "heart did that fluttering thing again for a minute",
+          "clinical_interpretation": "tachycardia, possibly due to stress or dietary factors",
+          "source_ref": "Anamnesis:PT-005/diary"
+        }
+      ],
+      "medication_adherence": "adherent",
+      "adherence_detail": "Patient insists he takes warfarin and metoprolol daily without missing.",
+      "lifestyle_factors": [
+        "eating a large kale-and-spinach salad daily",
+        "1 glass of wine per day",
+        "golf weekly"
+      ],
+      "family_history": [
+        "Father: atrial fibrillation"
+      ],
+      "patient_concerns": [
+        "Frustrated and a little offended that the clinic keeps asking if he takes his pills.",
+        "Wants to know why his numbers are off if he's doing everything right."
+      ],
+      "sensitive_flags": [],
+      "missing_data_flags": [
+        "onset of elevated heart rate not specified"
+      ],
+      "source_documents": [
+        "[Anamnesis:PT-005/chief_complaint]",
+        "[Anamnesis:PT-005/hpi]",
+        "[Anamnesis:PT-005/ros]",
+        "[Anamnesis:PT-005/social]",
+        "[Anamnesis:PT-005/family]",
+        "[Anamnesis:PT-005/adherence]",
+        "[Anamnesis:PT-005/diary]",
+        "[Anamnesis:PT-005/concerns]"
+      ]
+    },
+    "brief": {
+      "patient_id": "PT-005",
+      "generated_at": "2026-06-17T12:15:24.831668",
+      "alert_summary": "Heart rate elevated at 124 bpm, significantly above baseline of 76 bpm, with recent episodes of palpitations noted. Urgency classified as Urgent.",
+      "urgency": "Urgent",
+      "patient_snapshot": "Patient is diagnosed with atrial fibrillation and is currently taking warfarin 5 mg daily. Recent INR is 1.4, which is flagged as low.",
+      "contextual_analysis": [
+        {
+          "statement": "The patient's heart rate has risen from a baseline of 76 bpm to 124 bpm, indicating a concerning trend of tachycardia, corroborated by the patient's report of palpitations and anxiety.",
+          "sources": [
+            "RPM alert",
+            "RPM trend",
+            "Anamnesis:PT-005/hpi"
+          ]
+        },
+        {
+          "statement": "The patient reports episodes of palpitations, described as 'racing and fluttering', which may be linked to anxiety or dietary changes, suggesting potential triggers for the elevated heart rate.",
+          "sources": [
+            "Anamnesis:PT-005/hpi",
+            "Anamnesis:PT-005/diary"
+          ]
+        }
+      ],
+      "risk_assessment": [
+        {
+          "statement": "The elevated heart rate and history of atrial fibrillation raise concerns for potential complications such as thromboembolic events, especially given the low INR of 1.4, which may indicate inadequate anticoagulation.",
+          "sources": [
+            "EHR:PT-005/problem_list",
+            "EHR:PT-005/labs"
+          ]
+        },
+        {
+          "statement": "Possible reversible causes for the tachycardia include anxiety, dietary factors, or inadequate medication management, but the absence of recent heart rate readings limits assessment of the trend's seriousness.",
+          "sources": [
+            "Anamnesis:PT-005/hpi",
+            "Anamnesis:PT-005/diary"
+          ]
+        }
+      ],
+      "recommended_actions": [
+        {
+          "action": "Obtain recent heart rate readings and monitor for any further episodes of tachycardia or palpitations.",
+          "confidence": "High",
+          "supporting_evidence": [
+            "RPM trend"
+          ]
+        },
+        {
+          "action": "Evaluate the patient's INR levels and consider adjusting warfarin dosage if necessary to ensure adequate anticoagulation.",
+          "confidence": "Moderate",
+          "supporting_evidence": [
+            "EHR:PT-005/labs"
+          ]
+        },
+        {
+          "action": "Discuss potential triggers for palpitations with the patient, including anxiety management strategies and dietary review.",
+          "confidence": "Moderate",
+          "supporting_evidence": [
+            "Anamnesis:PT-005/hpi",
+            "Anamnesis:PT-005/diary"
+          ]
+        }
+      ],
+      "uncertainties_and_gaps": [
+        "Missing recent heart rate readings in EHR.",
+        "Onset of elevated heart rate not specified in anamnesis."
+      ],
+      "overall_confidence": "Moderate",
+      "cited_sources": [
+        "RPM alert",
+        "RPM trend",
+        "EHR:PT-005/problem_list",
+        "EHR:PT-005/labs",
+        "EHR:PT-005/medications",
+        "Anamnesis:PT-005/hpi",
+        "Anamnesis:PT-005/diary"
+      ]
+    },
+    "session": {
+      "alert_id": "ALERT-PT-005",
+      "patient_id": "PT-005",
+      "created_at": "2026-06-17T12:15:01",
+      "events": [
+        {
+          "ts": "2026-06-17T12:15:01",
+          "step": "alert_received",
+          "summary": "heart_rate=124 bpm (HR_HIGH)",
+          "data": {}
+        },
+        {
+          "ts": "2026-06-17T12:15:01",
+          "step": "severity_floor",
+          "summary": "rule severity=urgent, effective floor=Urgent",
+          "data": {
+            "severity": "urgent",
+            "urgency": "Urgent",
+            "rationale": "Heart rate 124 bpm (>150/<40 critical, >120 urgent, > threshold routine)."
+          }
+        },
+        {
+          "ts": "2026-06-17T12:15:05",
+          "step": "triage",
+          "summary": "urgency=Urgent: What is causing this patient's elevated heart rate of 124 bpm, and are there any underlying issues contributing to the recent palpitations?",
+          "data": {
+            "urgency": "Urgent"
+          }
+        },
+        {
+          "ts": "2026-06-17T12:15:13",
+          "step": "ehr_retrieval",
+          "summary": "1 problems, 1 meds, 1 labs (confidence 0.8)",
+          "data": {}
+        },
+        {
+          "ts": "2026-06-17T12:15:13",
+          "step": "anamnesis",
+          "summary": "adherence=adherent, 2 symptoms",
+          "data": {}
+        },
+        {
+          "ts": "2026-06-17T12:15:24",
+          "step": "synthesis",
+          "summary": "Clinical Context Brief produced.",
+          "data": {}
+        },
+        {
+          "ts": "2026-06-17T12:15:24",
+          "step": "complete",
+          "summary": "final_urgency=Urgent, escalated=False",
+          "data": {}
+        }
+      ]
+    }
+  },
+  "score": {
+    "final_urgency": "Urgent",
+    "acceptable_urgencies": [
+      "Urgent",
+      "Critical"
+    ],
+    "urgency_ok": true,
+    "must_include_coverage": 0.667,
+    "must_include_missing": [
+      "salad|vitamin k|leafy green|kale|spinach"
+    ],
+    "must_flag_coverage": 1.0,
+    "must_flag_missing": [],
+    "must_avoid_violations": [],
+    "citation_coverage": 1.0,
+    "citations_cited": 4,
+    "citations_total": 4,
+    "hallucinated_citations": [],
+    "hallucination_count": 0,
+    "latency_seconds": null,
+    "errors": 0,
+    "passed": true
+  },
+  "gold_brief": {
+    "patient_id": "PT-005",
+    "generated_at": "2026-06-01T08:00:00",
+    "alert_summary": "Heart rate 124 bpm (recent episodes up to 132 bpm), above the 110 bpm threshold, in a patient with atrial fibrillation. Classified Urgent.",
+    "urgency": "Urgent",
+    "patient_snapshot": "65-year-old man with atrial fibrillation and hypertension on warfarin 5 mg daily and metoprolol succinate 50 mg daily.",
+    "contextual_analysis": [
+      {
+        "statement": "Recent palpitations with heart rate up to 132 bpm suggest episodes of atrial fibrillation with rapid ventricular response.",
+        "sources": [
+          "RPM alert",
+          "Anamnesis:PT-005/diary",
+          "Anamnesis:PT-005/ros"
+        ]
+      },
+      {
+        "statement": "INR has been persistently sub-therapeutic (1.3-1.5; target 2.0-3.0) over the past month even though the patient reports taking warfarin every day \u2014 a discrepancy between self-report and the lab data.",
+        "sources": [
+          "EHR:PT-005/labs",
+          "Anamnesis:PT-005/adherence"
+        ]
+      },
+      {
+        "statement": "He recently began eating large daily kale-and-spinach salads; this added dietary vitamin K can lower INR and may explain the discrepancy without suggesting missed doses.",
+        "sources": [
+          "Anamnesis:PT-005/hpi",
+          "Anamnesis:PT-005/diary"
+        ]
+      }
+    ],
+    "risk_assessment": [
+      {
+        "statement": "Sub-therapeutic anticoagulation in atrial fibrillation substantially raises stroke risk.",
+        "sources": [
+          "EHR:PT-005/problem_list",
+          "EHR:PT-005/labs"
+        ]
+      },
+      {
+        "statement": "Poorly controlled ventricular rate may worsen symptoms and, if persistent, cardiac function.",
+        "sources": [
+          "RPM alert"
+        ]
+      }
+    ],
+    "recommended_actions": [
+      {
+        "action": "Review anticoagulation: the low INR is plausibly explained by increased dietary vitamin K rather than missed doses \u2014 discuss diet and adjust warfarin dosing and monitoring accordingly.",
+        "confidence": "High",
+        "supporting_evidence": [
+          "EHR:PT-005/labs",
+          "Anamnesis:PT-005/hpi"
+        ]
+      },
+      {
+        "action": "Assess and optimize rate control given recurrent rapid-response episodes.",
+        "confidence": "High",
+        "supporting_evidence": [
+          "RPM alert"
+        ]
+      },
+      {
+        "action": "Repeat INR and arrange close anticoagulation follow-up.",
+        "confidence": "Moderate",
+        "supporting_evidence": [
+          "EHR:PT-005/labs"
+        ]
+      }
+    ],
+    "uncertainties_and_gaps": [
+      "The cause of the low INR cannot be confirmed from the available data; dietary vitamin K is a plausible explanation alongside possible dosing factors \u2014 present this neutrally, without assuming the patient is at fault."
+    ],
+    "overall_confidence": "High",
+    "cited_sources": [
+      "RPM alert",
+      "EHR:PT-005/problem_list",
+      "EHR:PT-005/labs",
+      "Anamnesis:PT-005/hpi",
+      "Anamnesis:PT-005/adherence",
+      "Anamnesis:PT-005/diary"
+    ]
+  },
+  "gold_brief_markdown": "# Clinical Context Brief \u2014 Patient PT-005\n_Generated 2026-06-01 08:00 \u00b7 Urgency: **Urgent** \u00b7 Overall confidence: **High**_\n\n## 1. Alert Summary\nHeart rate 124 bpm (recent episodes up to 132 bpm), above the 110 bpm threshold, in a patient with atrial fibrillation. Classified Urgent.\n\n## 2. Patient Snapshot\n65-year-old man with atrial fibrillation and hypertension on warfarin 5 mg daily and metoprolol succinate 50 mg daily.\n\n## 3. Contextual Analysis\n- Recent palpitations with heart rate up to 132 bpm suggest episodes of atrial fibrillation with rapid ventricular response.  \n  _sources: RPM alert, Anamnesis:PT-005/diary, Anamnesis:PT-005/ros_\n- INR has been persistently sub-therapeutic (1.3-1.5; target 2.0-3.0) over the past month even though the patient reports taking warfarin every day \u2014 a discrepancy between self-report and the lab data.  \n  _sources: EHR:PT-005/labs, Anamnesis:PT-005/adherence_\n- He recently began eating large daily kale-and-spinach salads; this added dietary vitamin K can lower INR and may explain the discrepancy without suggesting missed doses.  \n  _sources: Anamnesis:PT-005/hpi, Anamnesis:PT-005/diary_\n\n## 4. Risk Assessment\n- Sub-therapeutic anticoagulation in atrial fibrillation substantially raises stroke risk.  \n  _sources: EHR:PT-005/problem_list, EHR:PT-005/labs_\n- Poorly controlled ventricular rate may worsen symptoms and, if persistent, cardiac function.  \n  _sources: RPM alert_\n\n## 5. Recommended Actions\n- [High] Review anticoagulation: the low INR is plausibly explained by increased dietary vitamin K rather than missed doses \u2014 discuss diet and adjust warfarin dosing and monitoring accordingly. _(evidence: EHR:PT-005/labs, Anamnesis:PT-005/hpi)_\n- [High] Assess and optimize rate control given recurrent rapid-response episodes. _(evidence: RPM alert)_\n- [Moderate] Repeat INR and arrange close anticoagulation follow-up. _(evidence: EHR:PT-005/labs)_\n\n## 6. Uncertainties & Gaps\n- The cause of the low INR cannot be confirmed from the available data; dietary vitamin K is a plausible explanation alongside possible dosing factors \u2014 present this neutrally, without assuming the patient is at fault.\n\n_Sources consulted: RPM alert, EHR:PT-005/problem_list, EHR:PT-005/labs, Anamnesis:PT-005/hpi, Anamnesis:PT-005/adherence, Anamnesis:PT-005/diary_",
+  "cached": true
+}

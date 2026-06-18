@@ -1,0 +1,33 @@
+{
+  "patient_id": "PT-010",
+  "intake_date": "2026-05-10",
+  "chief_complaint": "Diabetes follow-up.",
+  "history_of_present_illness": "Ms. Robinson reports inconsistent monitoring and frequent fast food during a busy work period.",
+  "review_of_systems": {
+    "endocrine": "Occasional increased thirst."
+  },
+  "social_history": {
+    "smoking": "Never",
+    "alcohol": "Socially",
+    "diet": "Frequent fast food",
+    "exercise": "Minimal",
+    "occupation": "Nurse (night shift)",
+    "living_situation": "Single parent, two children"
+  },
+  "family_history": [
+    "Mother: type 2 diabetes",
+    "Sister: type 2 diabetes"
+  ],
+  "medication_adherence": [
+    {
+      "medication": "Metformin",
+      "reported_status": "partial",
+      "detail": "Sometimes forgets the evening dose on night shifts."
+    }
+  ],
+  "symptom_diary": [],
+  "patient_concerns": [
+    "Struggling to find time for healthy habits with shift work."
+  ],
+  "sensitive_notes": []
+}

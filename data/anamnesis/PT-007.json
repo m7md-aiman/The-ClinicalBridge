@@ -1,0 +1,32 @@
+{
+  "patient_id": "PT-007",
+  "intake_date": "2026-05-18",
+  "chief_complaint": "CGM review.",
+  "history_of_present_illness": "Mr. Carter reports good control with occasional overnight lows after evening workouts.",
+  "review_of_systems": {
+    "endocrine": "Rare hypoglycemia symptoms at night."
+  },
+  "social_history": {
+    "smoking": "Never",
+    "alcohol": "Socially",
+    "diet": "Carb-counting",
+    "exercise": "Gym 5x/week",
+    "occupation": "Software developer",
+    "living_situation": "Lives alone"
+  },
+  "family_history": [
+    "Aunt: type 1 diabetes"
+  ],
+  "medication_adherence": [
+    {
+      "medication": "Insulin glargine",
+      "reported_status": "adherent",
+      "detail": "Nightly."
+    }
+  ],
+  "symptom_diary": [],
+  "patient_concerns": [
+    "Wants help reducing nighttime lows."
+  ],
+  "sensitive_notes": []
+}

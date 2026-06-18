@@ -1,0 +1,52 @@
+{
+  "patient_id": "PT-007",
+  "name": "Jamal Carter",
+  "date_of_birth": "1996-03-08",
+  "age": 30,
+  "sex": "male",
+  "mrn": "MRN-007",
+  "problem_list": [
+    {
+      "condition": "Type 1 diabetes mellitus",
+      "icd10": "E10.9",
+      "status": "active",
+      "onset_date": "2008-06-15"
+    }
+  ],
+  "medications": [
+    {
+      "name": "Insulin glargine",
+      "dose": "22 units",
+      "frequency": "once daily at bedtime",
+      "started": "2008-06-15",
+      "status": "active"
+    },
+    {
+      "name": "Insulin aspart",
+      "dose": "sliding scale",
+      "frequency": "with meals",
+      "started": "2008-06-15",
+      "status": "active"
+    }
+  ],
+  "allergies": [],
+  "lab_results": [
+    {
+      "test": "Hemoglobin A1c",
+      "value": "6.9",
+      "unit": "%",
+      "reference_range": "<7.0",
+      "date": "2026-04-19",
+      "flag": "normal"
+    }
+  ],
+  "visit_notes": [
+    {
+      "date": "2026-04-19",
+      "author": "Dr. Nguyen",
+      "specialty": "Endocrinology",
+      "note": "30M T1DM on basal-bolus + CGM, A1c 6.9, good control. Occasional nocturnal lows. Reviewed pump vs MDI."
+    }
+  ],
+  "record_completeness": "complete"
+}

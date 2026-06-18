@@ -1,0 +1,5 @@
+{
+  "live_available": false,
+  "model": "openai/gpt-4o-mini",
+  "name": "ClinicalBridge"
+}

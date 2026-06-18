@@ -1,0 +1,58 @@
+{
+  "patient_id": "PT-012",
+  "name": "Daniel Park",
+  "date_of_birth": "1981-01-27",
+  "age": 45,
+  "sex": "male",
+  "mrn": "MRN-012",
+  "problem_list": [
+    {
+      "condition": "Essential hypertension",
+      "icd10": "I10",
+      "status": "active",
+      "onset_date": "2023-04-18"
+    },
+    {
+      "condition": "Generalized anxiety disorder",
+      "icd10": "F41.1",
+      "status": "active",
+      "onset_date": "2020-11-05"
+    }
+  ],
+  "medications": [
+    {
+      "name": "Amlodipine",
+      "dose": "5 mg",
+      "frequency": "once daily",
+      "started": "2023-04-18",
+      "status": "active"
+    },
+    {
+      "name": "Sertraline",
+      "dose": "50 mg",
+      "frequency": "once daily",
+      "started": "2020-11-05",
+      "status": "active"
+    }
+  ],
+  "allergies": [],
+  "lab_results": [
+    {
+      "test": "Potassium",
+      "value": "4.0",
+      "unit": "mmol/L",
+      "reference_range": "3.5-5.1",
+      "date": "2026-02-22",
+      "flag": "normal"
+    }
+  ],
+  "visit_notes": [
+    {
+      "date": "2026-02-22",
+      "author": "Dr. Patel",
+      "specialty": "Primary Care",
+      "note": "45M with HTN and GAD. BP improving on amlodipine. Anxiety stable on sertraline; reports work stress. Home BP can spike with stress."
+    }
+  ],
+  "record_completeness": "complete"
+}

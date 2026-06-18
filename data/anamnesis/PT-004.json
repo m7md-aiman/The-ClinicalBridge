@@ -1,0 +1,35 @@
+{
+  "patient_id": "PT-004",
+  "intake_date": "2026-05-29",
+  "chief_complaint": "New patient establishing care; high blood pressure.",
+  "history_of_present_illness": "Ms. Anand recently moved and is establishing care. She says she has had high blood pressure 'for years' and was on 'a water pill and another small white tablet' but ran out during the move three weeks ago and hasn't refilled. She is unsure of the exact names. No chest pain or headaches.",
+  "review_of_systems": {
+    "cardiovascular": "Denies chest pain, palpitations, swelling.",
+    "neurological": "Occasional mild headaches, no vision changes."
+  },
+  "social_history": {
+    "smoking": "Never",
+    "alcohol": "Occasional wine",
+    "diet": "Vegetarian",
+    "exercise": "Yoga twice weekly",
+    "occupation": "Accountant",
+    "living_situation": "Lives with spouse, recently relocated"
+  },
+  "family_history": [
+    "Mother: hypertension, stroke",
+    "Brother: type 2 diabetes"
+  ],
+  "medication_adherence": [
+    {
+      "medication": "unknown 'water pill'",
+      "reported_status": "non_adherent",
+      "detail": "Ran out ~3 weeks ago during the move; names unknown."
+    }
+  ],
+  "symptom_diary": [],
+  "patient_concerns": [
+    "Wants to get back on her medications.",
+    "Worried because her mother had a stroke."
+  ],
+  "sensitive_notes": []
+}

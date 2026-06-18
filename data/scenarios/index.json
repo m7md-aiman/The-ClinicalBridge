@@ -1,0 +1,37 @@
+[
+  {
+    "id": "missed_medication",
+    "title": "The Missed Medication",
+    "patient_id": "PT-001",
+    "expected_urgency": "Urgent",
+    "description": "A hypertensive patient's BP spikes; the anamnesis reveals he stopped his ACE inhibitor due to a persistent cough \u2014 a side effect not flagged in the EHR."
+  },
+  {
+    "id": "false_alarm",
+    "title": "The False Alarm",
+    "patient_id": "PT-002",
+    "expected_urgency": "Routine",
+    "description": "A diabetic patient's glucose reading triggers an alert, but the anamnesis records a planned dietary change and a recent medication adjustment \u2014 the alert is contextually benign."
+  },
+  {
+    "id": "silent_deterioration",
+    "title": "The Silent Deterioration",
+    "patient_id": "PT-003",
+    "expected_urgency": "Urgent",
+    "description": "A heart-failure patient's weight rises gradually over two weeks; each reading is within threshold, but the trend plus reported ankle swelling suggests fluid retention."
+  },
+  {
+    "id": "incomplete_record",
+    "title": "The Incomplete Record",
+    "patient_id": "PT-004",
+    "expected_urgency": "Routine",
+    "description": "A patient transfers from another system; the EHR is sparse, so the system must rely heavily on anamnesis data while clearly flagging the gaps."
+  },
+  {
+    "id": "conflicting_data",
+    "title": "The Conflicting Data",
+    "patient_id": "PT-005",
+    "expected_urgency": "Urgent",
+    "description": "The patient reports full medication adherence, but lab results show sub-therapeutic drug levels \u2014 the system must flag the discrepancy without making accusations."
+  }
+]

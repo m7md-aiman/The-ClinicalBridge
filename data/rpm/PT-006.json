@@ -1,0 +1,386 @@
+{
+  "patient_id": "PT-006",
+  "monitoring_start": "2026-05-03",
+  "monitoring_end": "2026-06-01",
+  "reading_frequency": "daily",
+  "vitals": [
+    {
+      "vital_type": "spo2",
+      "unit": "%",
+      "device": "pulse oximeter",
+      "baseline": 94,
+      "threshold_low": 90,
+      "threshold_high": null
+    },
+    {
+      "vital_type": "heart_rate",
+      "unit": "bpm",
+      "device": "pulse oximeter",
+      "baseline": 82,
+      "threshold_low": 50,
+      "threshold_high": 110
+    }
+  ],
+  "readings": [
+    {
+      "timestamp": "2026-05-03T08:00",
+      "vital_type": "spo2",
+      "value": 93.0,
+      "unit": "%"
+    },
+    {
+      "timestamp": "2026-05-04T08:00",
+      "vital_type": "spo2",
+      "value": 95.0,
+      "unit": "%"
+    },
+    {
+      "timestamp": "2026-05-05T08:00",
+      "vital_type": "spo2",
+      "value": 97.0,
+      "unit": "%"
+    },
+    {
+      "timestamp": "2026-05-06T08:00",
+      "vital_type": "spo2",
+      "value": 94.0,
+      "unit": "%"
+    },
+    {
+      "timestamp": "2026-05-07T08:00",
+      "vital_type": "spo2",
+      "value": 96.0,
+      "unit": "%"
+    },
+    {
+      "timestamp": "2026-05-08T08:00",
+      "vital_type": "spo2",
+      "value": 91.0,
+      "unit": "%"
+    },
+    {
+      "timestamp": "2026-05-09T08:00",
+      "vital_type": "spo2",
+      "value": 92.0,
+      "unit": "%"
+    },
+    {
+      "timestamp": "2026-05-10T08:00",
+      "vital_type": "spo2",
+      "value": 94.0,
+      "unit": "%"
+    },
+    {
+      "timestamp": "2026-05-11T08:00",
+      "vital_type": "spo2",
+      "value": 93.0,
+      "unit": "%"
+    },
+    {
+      "timestamp": "2026-05-12T08:00",
+      "vital_type": "spo2",
+      "value": 94.0,
+      "unit": "%"
+    },
+    {
+      "timestamp": "2026-05-13T08:00",
+      "vital_type": "spo2",
+      "value": 95.0,
+      "unit": "%"
+    },
+    {
+      "timestamp": "2026-05-14T08:00",
+      "vital_type": "spo2",
+      "value": 94.0,
+      "unit": "%"
+    },
+    {
+      "timestamp": "2026-05-15T08:00",
+      "vital_type": "spo2",
+      "value": 94.0,
+      "unit": "%"
+    },
+    {
+      "timestamp": "2026-05-16T08:00",
+      "vital_type": "spo2",
+      "value": 94.0,
+      "unit": "%"
+    },
+    {
+      "timestamp": "2026-05-17T08:00",
+      "vital_type": "spo2",
+      "value": 95.0,
+      "unit": "%"
+    },
+    {
+      "timestamp": "2026-05-18T08:00",
+      "vital_type": "spo2",
+      "value": 94.0,
+      "unit": "%"
+    },
+    {
+      "timestamp": "2026-05-19T08:00",
+      "vital_type": "spo2",
+      "value": 94.0,
+      "unit": "%"
+    },
+    {
+      "timestamp": "2026-05-20T08:00",
+      "vital_type": "spo2",
+      "value": 95.0,
+      "unit": "%"
+    },
+    {
+      "timestamp": "2026-05-21T08:00",
+      "vital_type": "spo2",
+      "value": 93.0,
+      "unit": "%"
+    },
+    {
+      "timestamp": "2026-05-22T08:00",
+      "vital_type": "spo2",
+      "value": 95.0,
+      "unit": "%"
+    },
+    {
+      "timestamp": "2026-05-23T08:00",
+      "vital_type": "spo2",
+      "value": 94.0,
+      "unit": "%"
+    },
+    {
+      "timestamp": "2026-05-24T08:00",
+      "vital_type": "spo2",
+      "value": 94.0,
+      "unit": "%"
+    },
+    {
+      "timestamp": "2026-05-25T08:00",
+      "vital_type": "spo2",
+      "value": 94.0,
+      "unit": "%"
+    },
+    {
+      "timestamp": "2026-05-26T08:00",
+      "vital_type": "spo2",
+      "value": 95.0,
+      "unit": "%"
+    },
+    {
+      "timestamp": "2026-05-27T08:00",
+      "vital_type": "spo2",
+      "value": 94.0,
+      "unit": "%"
+    },
+    {
+      "timestamp": "2026-05-28T08:00",
+      "vital_type": "spo2",
+      "value": 95.0,
+      "unit": "%"
+    },
+    {
+      "timestamp": "2026-05-29T08:00",
+      "vital_type": "spo2",
+      "value": 92.0,
+      "unit": "%"
+    },
+    {
+      "timestamp": "2026-05-30T08:00",
+      "vital_type": "spo2",
+      "value": 96.0,
+      "unit": "%"
+    },
+    {
+      "timestamp": "2026-05-31T08:00",
+      "vital_type": "spo2",
+      "value": 93.0,
+      "unit": "%"
+    },
+    {
+      "timestamp": "2026-06-01T08:00",
+      "vital_type": "spo2",
+      "value": 93.0,
+      "unit": "%"
+    },
+    {
+      "timestamp": "2026-05-03T08:00",
+      "vital_type": "heart_rate",
+      "value": 86.0,
+      "unit": "bpm"
+    },
+    {
+      "timestamp": "2026-05-04T08:00",
+      "vital_type": "heart_rate",
+      "value": 84.8,
+      "unit": "bpm"
+    },
+    {
+      "timestamp": "2026-05-05T08:00",
+      "vital_type": "heart_rate",
+      "value": 88.4,
+      "unit": "bpm"
+    },
+    {
+      "timestamp": "2026-05-06T08:00",
+      "vital_type": "heart_rate",
+      "value": 75.9,
+      "unit": "bpm"
+    },
+    {
+      "timestamp": "2026-05-07T08:00",
+      "vital_type": "heart_rate",
+      "value": 77.4,
+      "unit": "bpm"
+    },
+    {
+      "timestamp": "2026-05-08T08:00",
+      "vital_type": "heart_rate",
+      "value": 68.1,
+      "unit": "bpm"
+    },
+    {
+      "timestamp": "2026-05-09T08:00",
+      "vital_type": "heart_rate",
+      "value": 82.2,
+      "unit": "bpm"
+    },
+    {
+      "timestamp": "2026-05-10T08:00",
+      "vital_type": "heart_rate",
+      "value": 87.0,
+      "unit": "bpm"
+    },
+    {
+      "timestamp": "2026-05-11T08:00",
+      "vital_type": "heart_rate",
+      "value": 79.0,
+      "unit": "bpm"
+    },
+    {
+      "timestamp": "2026-05-12T08:00",
+      "vital_type": "heart_rate",
+      "value": 86.1,
+      "unit": "bpm"
+    },
+    {
+      "timestamp": "2026-05-13T08:00",
+      "vital_type": "heart_rate",
+      "value": 85.1,
+      "unit": "bpm"
+    },
+    {
+      "timestamp": "2026-05-14T08:00",
+      "vital_type": "heart_rate",
+      "value": 80.6,
+      "unit": "bpm"
+    },
+    {
+      "timestamp": "2026-05-15T08:00",
+      "vital_type": "heart_rate",
+      "value": 83.3,
+      "unit": "bpm"
+    },
+    {
+      "timestamp": "2026-05-16T08:00",
+      "vital_type": "heart_rate",
+      "value": 79.7,
+      "unit": "bpm"
+    },
+    {
+      "timestamp": "2026-05-17T08:00",
+      "vital_type": "heart_rate",
+      "value": 80.4,
+      "unit": "bpm"
+    },
+    {
+      "timestamp": "2026-05-18T08:00",
+      "vital_type": "heart_rate",
+      "value": 87.5,
+      "unit": "bpm"
+    },
+    {
+      "timestamp": "2026-05-19T08:00",
+      "vital_type": "heart_rate",
+      "value": 69.4,
+      "unit": "bpm"
+    },
+    {
+      "timestamp": "2026-05-20T08:00",
+      "vital_type": "heart_rate",
+      "value": 88.8,
+      "unit": "bpm"
+    },
+    {
+      "timestamp": "2026-05-21T08:00",
+      "vital_type": "heart_rate",
+      "value": 72.7,
+      "unit": "bpm"
+    },
+    {
+      "timestamp": "2026-05-22T08:00",
+      "vital_type": "heart_rate",
+      "value": 77.3,
+      "unit": "bpm"
+    },
+    {
+      "timestamp": "2026-05-23T08:00",
+      "vital_type": "heart_rate",
+      "value": 86.1,
+      "unit": "bpm"
+    },
+    {
+      "timestamp": "2026-05-24T08:00",
+      "vital_type": "heart_rate",
+      "value": 84.2,
+      "unit": "bpm"
+    },
+    {
+      "timestamp": "2026-05-25T08:00",
+      "vital_type": "heart_rate",
+      "value": 87.7,
+      "unit": "bpm"
+    },
+    {
+      "timestamp": "2026-05-26T08:00",
+      "vital_type": "heart_rate",
+      "value": 80.4,
+      "unit": "bpm"
+    },
+    {
+      "timestamp": "2026-05-27T08:00",
+      "vital_type": "heart_rate",
+      "value": 78.5,
+      "unit": "bpm"
+    },
+    {
+      "timestamp": "2026-05-28T08:00",
+      "vital_type": "heart_rate",
+      "value": 73.3,
+      "unit": "bpm"
+    },
+    {
+      "timestamp": "2026-05-29T08:00",
+      "vital_type": "heart_rate",
+      "value": 71.9,
+      "unit": "bpm"
+    },
+    {
+      "timestamp": "2026-05-30T08:00",
+      "vital_type": "heart_rate",
+      "value": 85.2,
+      "unit": "bpm"
+    },
+    {
+      "timestamp": "2026-05-31T08:00",
+      "vital_type": "heart_rate",
+      "value": 76.2,
+      "unit": "bpm"
+    },
+    {
+      "timestamp": "2026-06-01T08:00",
+      "vital_type": "heart_rate",
+      "value": 88.3,
+      "unit": "bpm"
+    }
+  ]
+}

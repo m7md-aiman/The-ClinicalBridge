@@ -1,0 +1,74 @@
+{
+  "patient_id": "PT-005",
+  "name": "Gerald Foster",
+  "date_of_birth": "1960-09-12",
+  "age": 65,
+  "sex": "male",
+  "mrn": "MRN-005",
+  "problem_list": [
+    {
+      "condition": "Atrial fibrillation",
+      "icd10": "I48.91",
+      "status": "active",
+      "onset_date": "2021-03-04"
+    },
+    {
+      "condition": "Essential hypertension",
+      "icd10": "I10",
+      "status": "active",
+      "onset_date": "2015-11-20"
+    }
+  ],
+  "medications": [
+    {
+      "name": "Warfarin",
+      "dose": "5 mg",
+      "frequency": "once daily",
+      "started": "2021-03-04",
+      "status": "active"
+    },
+    {
+      "name": "Metoprolol succinate",
+      "dose": "50 mg",
+      "frequency": "once daily",
+      "started": "2021-03-04",
+      "status": "active"
+    }
+  ],
+  "allergies": [],
+  "lab_results": [
+    {
+      "test": "INR",
+      "value": "1.3",
+      "unit": "ratio",
+      "reference_range": "2.0-3.0 (target)",
+      "date": "2026-05-28",
+      "flag": "low"
+    },
+    {
+      "test": "INR",
+      "value": "1.5",
+      "unit": "ratio",
+      "reference_range": "2.0-3.0 (target)",
+      "date": "2026-05-14",
+      "flag": "low"
+    },
+    {
+      "test": "INR",
+      "value": "1.4",
+      "unit": "ratio",
+      "reference_range": "2.0-3.0 (target)",
+      "date": "2026-04-30",
+      "flag": "low"
+    }
+  ],
+  "visit_notes": [
+    {
+      "date": "2026-05-28",
+      "author": "Anticoag Clinic",
+      "specialty": "Pharmacy",
+      "note": "65M on warfarin for AF, INR persistently sub-therapeutic (1.3-1.5) over the last month despite reported adherence. Patient counseled. Consider adherence assessment, dietary vitamin K review, or therapy change."
+    }
+  ],
+  "record_completeness": "complete"
+}

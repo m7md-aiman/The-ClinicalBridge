@@ -1,0 +1,383 @@
+{
+  "scenario": {
+    "id": "false_alarm",
+    "title": "The False Alarm",
+    "lesson": "A diabetic patient's glucose reading triggers an alert, but the anamnesis records a planned dietary change and a recent medication adjustment \u2014 the alert is contextually benign.",
+    "expected_urgency": "Routine",
+    "patient_id": "PT-002",
+    "alert": {
+      "alert_id": "ALERT-PT-002",
+      "patient_id": "PT-002",
+      "timestamp": "2026-06-01T08:00:00",
+      "device_type": "Contour glucometer",
+      "reading": {
+        "vital_type": "blood_glucose",
+        "value": 247.0,
+        "value_secondary": null,
+        "unit": "mg/dL"
+      },
+      "device_alert_category": "GLUCOSE_HIGH",
+      "baseline_value": 140.0,
+      "thresholds": {
+        "vital_type": "blood_glucose",
+        "low": 70.0,
+        "high": 180.0,
+        "unit": "mg/dL"
+      },
+      "notes": "Single fasting reading; prior readings within range."
+    },
+    "alert_display": "247 mg/dL",
+    "alert_category": "GLUCOSE_HIGH"
+  },
+  "result": {
+    "alert_id": "ALERT-PT-002",
+    "patient_id": "PT-002",
+    "final_urgency": "Routine",
+    "escalated": false,
+    "deterministic_severity": {
+      "severity": "routine",
+      "urgency": "Routine",
+      "rationale": "Glucose 247 mg/dL (>400/<50 critical, >300 urgent, > threshold routine)."
+    },
+    "errors": [],
+    "triage": {
+      "patient_id": "PT-002",
+      "urgency": "Routine",
+      "clinical_question": "What factors contributed to this patient's elevated blood glucose level of 247 mg/dL?",
+      "reasoning": "The measured blood glucose is significantly above the threshold and baseline, but it is a single reading and the patient has prior readings within range, indicating this may not be an urgent issue; review in the normal workflow is appropriate.",
+      "requires_immediate_escalation": false,
+      "ehr_query": {
+        "focus_terms": [
+          "diabetes",
+          "glucose-lowering medications",
+          "recent A1c"
+        ],
+        "rationale": "These terms are relevant to understanding the patient's diabetes management and the significance of the elevated glucose reading."
+      },
+      "anamnesis_query": {
+        "focus_terms": [
+          "recent diet changes",
+          "medication adherence",
+          "recent illness"
+        ],
+        "rationale": "These topics will help identify potential lifestyle or adherence issues that could explain the elevated blood glucose level."
+      }
+    },
+    "ehr_context": {
+      "patient_id": "PT-002",
+      "problem_list": [
+        {
+          "condition": "Type 2 diabetes mellitus without complications",
+          "icd10_code": "E11.9",
+          "status": "active",
+          "onset_date": "2019-01-15",
+          "source_ref": "EHR:PT-002/problem_list"
+        }
+      ],
+      "medications": [
+        {
+          "name": "Metformin",
+          "dose": "1000 mg",
+          "frequency": "twice daily",
+          "status": "active",
+          "source_ref": "EHR:PT-002/medications"
+        },
+        {
+          "name": "Empagliflozin",
+          "dose": "10 mg",
+          "frequency": null,
+          "status": "active",
+          "source_ref": "EHR:PT-002/visit_note(2026-05-12)"
+        }
+      ],
+      "lab_results": [
+        {
+          "test_name": "Hemoglobin A1c",
+          "value": "7.4 %",
+          "unit": null,
+          "reference_range": "<7.0",
+          "date": "2026-05-10",
+          "trend": null,
+          "flag": "high",
+          "source_ref": "EHR:PT-002/labs"
+        }
+      ],
+      "visit_notes": [
+        {
+          "date": "2026-05-12",
+          "excerpt": "53F with T2DM, A1c 7.4 improving. Added empagliflozin 10mg to metformin. Counseled that glucose may fluctuate as body adjusts to new agent and to any dietary changes. Patient motivated, starting a low-carb diet.",
+          "source_ref": "EHR:PT-002/visit_note(2026-05-12)"
+        }
+      ],
+      "retrieval_confidence": 0.9,
+      "missing_data_flags": [],
+      "source_documents": [
+        "EHR:PT-002/visit_note(2026-05-12)",
+        "EHR:PT-002/labs",
+        "EHR:PT-002/problem_list",
+        "EHR:PT-002/medications"
+      ]
+    },
+    "anamnesis_summary": {
+      "patient_id": "PT-002",
+      "reported_symptoms": [
+        {
+          "symptom": "elevated fasting glucose",
+          "onset": "2026-05-31",
+          "progression": "one high reading after a period of lower readings",
+          "patient_words": "meter said 247 this morning",
+          "clinical_interpretation": "fasting glucose level of 247 mg/dL, higher than usual range of 120-150 mg/dL",
+          "source_ref": "Anamnesis:PT-002/hpi"
+        }
+      ],
+      "medication_adherence": "adherent",
+      "adherence_detail": "Takes Metformin twice daily and started Empagliflozin two weeks ago, taking as directed.",
+      "lifestyle_factors": [
+        "started keto diet ~1 week ago",
+        "had a big slice of birthday cake and some juice on 2026-05-30"
+      ],
+      "family_history": [
+        "Mother: type 2 diabetes",
+        "Father: hypertension"
+      ],
+      "patient_concerns": [
+        "Wonders if one high reading after a birthday means her diabetes is out of control."
+      ],
+      "sensitive_flags": [],
+      "missing_data_flags": [],
+      "source_documents": [
+        "anamnesis/PT-002"
+      ]
+    },
+    "brief": {
+      "patient_id": "PT-002",
+      "generated_at": "2026-06-17T12:14:12.242176",
+      "alert_summary": "Blood glucose level of 247 mg/dL is significantly elevated compared to the baseline of 140 mg/dL, indicating a potential issue with glycemic control. Urgency classified as Routine.",
+      "urgency": "Routine",
+      "patient_snapshot": "53-year-old female with Type 2 diabetes mellitus without complications, currently taking Metformin 1000 mg twice daily and Empagliflozin 10 mg.",
+      "contextual_analysis": [
+        {
+          "statement": "The patient's blood glucose level of 247 mg/dL is a notable increase from her prior readings, which were within range, indicating a potential deterioration in glycemic control.",
+          "sources": [
+            "RPM alert",
+            "RPM trend"
+          ]
+        },
+        {
+          "statement": "The patient recently started a low-carb diet and began taking Empagliflozin two weeks ago, which may contribute to fluctuations in her blood glucose levels as her body adjusts to the new medication.",
+          "sources": [
+            "EHR:PT-002/visit_note(2026-05-12)"
+          ]
+        },
+        {
+          "statement": "The patient reported a significant dietary indiscretion (birthday cake and juice) shortly before the elevated reading, which could explain the spike in glucose levels.",
+          "sources": [
+            "Anamnesis:PT-002/hpi"
+          ]
+        }
+      ],
+      "risk_assessment": [
+        {
+          "statement": "The rising trend in blood glucose levels, combined with the recent dietary indiscretion, raises concerns about the patient's diabetes management and potential for hyperglycemia.",
+          "sources": [
+            "RPM trend",
+            "Anamnesis:PT-002/hpi"
+          ]
+        },
+        {
+          "statement": "The patient's Hemoglobin A1c of 7.4% indicates suboptimal long-term glycemic control, which may be exacerbated by recent dietary changes and medication adjustments.",
+          "sources": [
+            "EHR:PT-002/labs"
+          ]
+        }
+      ],
+      "recommended_actions": [
+        {
+          "action": "Consider counseling the patient on the impact of dietary choices on blood glucose levels, especially after recent indulgences.",
+          "confidence": "High",
+          "supporting_evidence": [
+            "Anamnesis:PT-002/hpi",
+            "EHR:PT-002/visit_note(2026-05-12)"
+          ]
+        },
+        {
+          "action": "Monitor the patient's blood glucose levels closely over the next few weeks to assess the impact of the new medication and dietary changes.",
+          "confidence": "Moderate",
+          "supporting_evidence": [
+            "RPM trend",
+            "EHR:PT-002/visit_note(2026-05-12)"
+          ]
+        },
+        {
+          "action": "Evaluate the need for potential adjustments in diabetes management if elevated glucose levels persist despite adherence to the new regimen.",
+          "confidence": "Moderate",
+          "supporting_evidence": [
+            "EHR:PT-002/labs",
+            "EHR:PT-002/medications"
+          ]
+        }
+      ],
+      "uncertainties_and_gaps": [
+        "The patient's self-reported adherence to the low-carb diet may not fully account for the recent dietary indiscretion, which could affect glucose levels."
+      ],
+      "overall_confidence": "Moderate",
+      "cited_sources": [
+        "RPM alert",
+        "RPM trend",
+        "EHR:PT-002/visit_note(2026-05-12)",
+        "Anamnesis:PT-002/hpi",
+        "EHR:PT-002/labs",
+        "EHR:PT-002/medications",
+        "EHR:PT-002/problem_list"
+      ]
+    },
+    "session": {
+      "alert_id": "ALERT-PT-002",
+      "patient_id": "PT-002",
+      "created_at": "2026-06-17T12:13:45",
+      "events": [
+        {
+          "ts": "2026-06-17T12:13:45",
+          "step": "alert_received",
+          "summary": "blood_glucose=247 mg/dL (GLUCOSE_HIGH)",
+          "data": {}
+        },
+        {
+          "ts": "2026-06-17T12:13:45",
+          "step": "severity_floor",
+          "summary": "rule severity=routine, effective floor=Routine",
+          "data": {
+            "severity": "routine",
+            "urgency": "Routine",
+            "rationale": "Glucose 247 mg/dL (>400/<50 critical, >300 urgent, > threshold routine)."
+          }
+        },
+        {
+          "ts": "2026-06-17T12:13:49",
+          "step": "triage",
+          "summary": "urgency=Routine: What factors contributed to this patient's elevated blood glucose level of 247 mg/dL?",
+          "data": {
+            "urgency": "Routine"
+          }
+        },
+        {
+          "ts": "2026-06-17T12:13:58",
+          "step": "ehr_retrieval",
+          "summary": "1 problems, 2 meds, 1 labs (confidence 0.9)",
+          "data": {}
+        },
+        {
+          "ts": "2026-06-17T12:13:58",
+          "step": "anamnesis",
+          "summary": "adherence=adherent, 1 symptoms",
+          "data": {}
+        },
+        {
+          "ts": "2026-06-17T12:14:12",
+          "step": "synthesis",
+          "summary": "Clinical Context Brief produced.",
+          "data": {}
+        },
+        {
+          "ts": "2026-06-17T12:14:12",
+          "step": "complete",
+          "summary": "final_urgency=Routine, escalated=False",
+          "data": {}
+        }
+      ]
+    }
+  },
+  "score": {
+    "final_urgency": "Routine",
+    "acceptable_urgencies": [
+      "Routine",
+      "Informational"
+    ],
+    "urgency_ok": true,
+    "must_include_coverage": 0.667,
+    "must_include_missing": [
+      "single|isolated|one reading|one-off"
+    ],
+    "must_flag_coverage": 0.0,
+    "must_flag_missing": [
+      "follow-up|recheck|confirm|repeat"
+    ],
+    "must_avoid_violations": [],
+    "citation_coverage": 1.0,
+    "citations_cited": 5,
+    "citations_total": 5,
+    "hallucinated_citations": [],
+    "hallucination_count": 0,
+    "latency_seconds": null,
+    "errors": 0,
+    "passed": true
+  },
+  "gold_brief": {
+    "patient_id": "PT-002",
+    "generated_at": "2026-06-01T08:00:00",
+    "alert_summary": "Single fasting blood glucose of 247 mg/dL, above the 180 mg/dL threshold, in a patient whose readings have otherwise been ~110-150 all month. Classified Routine \u2014 likely contextually benign.",
+    "urgency": "Routine",
+    "patient_snapshot": "53-year-old woman with type 2 diabetes (A1c 7.4%, improving) and obesity, on metformin 1000 mg twice daily plus empagliflozin 10 mg daily (started two weeks ago).",
+    "contextual_analysis": [
+      {
+        "statement": "The isolated spike immediately followed a birthday celebration with cake and juice.",
+        "sources": [
+          "Anamnesis:PT-002/diary",
+          "Anamnesis:PT-002/hpi"
+        ]
+      },
+      {
+        "statement": "Her glucose had actually been running well (110-130) since starting a low-carb diet a week ago.",
+        "sources": [
+          "Anamnesis:PT-002/diary",
+          "RPM alert"
+        ]
+      },
+      {
+        "statement": "Empagliflozin was added two weeks ago and she was counseled that glucose may fluctuate during the adjustment period.",
+        "sources": [
+          "EHR:PT-002/visit_note",
+          "EHR:PT-002/medications"
+        ]
+      }
+    ],
+    "risk_assessment": [
+      {
+        "statement": "A single post-indulgence reading in an otherwise improving, asymptomatic patient is unlikely to reflect a meaningful change in control.",
+        "sources": [
+          "RPM alert",
+          "Anamnesis:PT-002/ros"
+        ]
+      }
+    ],
+    "recommended_actions": [
+      {
+        "action": "Reassure the patient; no urgent action needed. Continue the current regimen and diet.",
+        "confidence": "High",
+        "supporting_evidence": [
+          "Anamnesis:PT-002/diary"
+        ]
+      },
+      {
+        "action": "Recheck fasting glucose over the next few days to confirm return to baseline.",
+        "confidence": "Moderate",
+        "supporting_evidence": [
+          "RPM alert"
+        ]
+      }
+    ],
+    "uncertainties_and_gaps": [
+      "Only one elevated reading is available after the event; confirm with follow-up readings."
+    ],
+    "overall_confidence": "High",
+    "cited_sources": [
+      "RPM alert",
+      "EHR:PT-002/visit_note",
+      "EHR:PT-002/medications",
+      "Anamnesis:PT-002/diary",
+      "Anamnesis:PT-002/hpi"
+    ]
+  },
+  "gold_brief_markdown": "# Clinical Context Brief \u2014 Patient PT-002\n_Generated 2026-06-01 08:00 \u00b7 Urgency: **Routine** \u00b7 Overall confidence: **High**_\n\n## 1. Alert Summary\nSingle fasting blood glucose of 247 mg/dL, above the 180 mg/dL threshold, in a patient whose readings have otherwise been ~110-150 all month. Classified Routine \u2014 likely contextually benign.\n\n## 2. Patient Snapshot\n53-year-old woman with type 2 diabetes (A1c 7.4%, improving) and obesity, on metformin 1000 mg twice daily plus empagliflozin 10 mg daily (started two weeks ago).\n\n## 3. Contextual Analysis\n- The isolated spike immediately followed a birthday celebration with cake and juice.  \n  _sources: Anamnesis:PT-002/diary, Anamnesis:PT-002/hpi_\n- Her glucose had actually been running well (110-130) since starting a low-carb diet a week ago.  \n  _sources: Anamnesis:PT-002/diary, RPM alert_\n- Empagliflozin was added two weeks ago and she was counseled that glucose may fluctuate during the adjustment period.  \n  _sources: EHR:PT-002/visit_note, EHR:PT-002/medications_\n\n## 4. Risk Assessment\n- A single post-indulgence reading in an otherwise improving, asymptomatic patient is unlikely to reflect a meaningful change in control.  \n  _sources: RPM alert, Anamnesis:PT-002/ros_\n\n## 5. Recommended Actions\n- [High] Reassure the patient; no urgent action needed. Continue the current regimen and diet. _(evidence: Anamnesis:PT-002/diary)_\n- [Moderate] Recheck fasting glucose over the next few days to confirm return to baseline. _(evidence: RPM alert)_\n\n## 6. Uncertainties & Gaps\n- Only one elevated reading is available after the event; confirm with follow-up readings.\n\n_Sources consulted: RPM alert, EHR:PT-002/visit_note, EHR:PT-002/medications, Anamnesis:PT-002/diary, Anamnesis:PT-002/hpi_",
+  "cached": true
+}

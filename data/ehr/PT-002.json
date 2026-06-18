@@ -1,0 +1,74 @@
+{
+  "patient_id": "PT-002",
+  "name": "Maria Delgado",
+  "date_of_birth": "1972-07-21",
+  "age": 53,
+  "sex": "female",
+  "mrn": "MRN-002",
+  "problem_list": [
+    {
+      "condition": "Type 2 diabetes mellitus without complications",
+      "icd10": "E11.9",
+      "status": "active",
+      "onset_date": "2019-01-15"
+    },
+    {
+      "condition": "Obesity",
+      "icd10": "E66.9",
+      "status": "active",
+      "onset_date": "2018-06-01"
+    }
+  ],
+  "medications": [
+    {
+      "name": "Metformin",
+      "dose": "1000 mg",
+      "frequency": "twice daily",
+      "started": "2019-01-15",
+      "status": "active"
+    },
+    {
+      "name": "Empagliflozin",
+      "dose": "10 mg",
+      "frequency": "once daily",
+      "started": "2026-05-12",
+      "status": "active"
+    }
+  ],
+  "allergies": [],
+  "lab_results": [
+    {
+      "test": "Hemoglobin A1c",
+      "value": "7.4",
+      "unit": "%",
+      "reference_range": "<7.0",
+      "date": "2026-05-10",
+      "flag": "high"
+    },
+    {
+      "test": "Hemoglobin A1c",
+      "value": "7.9",
+      "unit": "%",
+      "reference_range": "<7.0",
+      "date": "2025-11-08",
+      "flag": "high"
+    },
+    {
+      "test": "Creatinine",
+      "value": "0.8",
+      "unit": "mg/dL",
+      "reference_range": "0.6-1.1",
+      "date": "2026-05-10",
+      "flag": "normal"
+    }
+  ],
+  "visit_notes": [
+    {
+      "date": "2026-05-12",
+      "author": "Dr. Nguyen",
+      "specialty": "Endocrinology",
+      "note": "53F with T2DM, A1c 7.4 improving. Added empagliflozin 10mg to metformin. Counseled that glucose may fluctuate as body adjusts to new agent and to any dietary changes. Patient motivated, starting a low-carb diet."
+    }
+  ],
+  "record_completeness": "complete"
+}

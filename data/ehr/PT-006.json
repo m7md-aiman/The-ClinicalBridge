@@ -1,0 +1,58 @@
+{
+  "patient_id": "PT-006",
+  "name": "Eleanor Voss",
+  "date_of_birth": "1949-12-19",
+  "age": 76,
+  "sex": "female",
+  "mrn": "MRN-006",
+  "problem_list": [
+    {
+      "condition": "Chronic obstructive pulmonary disease",
+      "icd10": "J44.9",
+      "status": "active",
+      "onset_date": "2018-01-22"
+    }
+  ],
+  "medications": [
+    {
+      "name": "Tiotropium",
+      "dose": "18 mcg",
+      "frequency": "once daily (inhaled)",
+      "started": "2018-01-22",
+      "status": "active"
+    },
+    {
+      "name": "Albuterol",
+      "dose": "90 mcg",
+      "frequency": "as needed (inhaled)",
+      "started": "2018-01-22",
+      "status": "active"
+    }
+  ],
+  "allergies": [
+    {
+      "substance": "Sulfa drugs",
+      "reaction": "hives",
+      "severity": "moderate"
+    }
+  ],
+  "lab_results": [
+    {
+      "test": "Hemoglobin",
+      "value": "13.1",
+      "unit": "g/dL",
+      "reference_range": "12.0-15.5",
+      "date": "2026-02-11",
+      "flag": "normal"
+    }
+  ],
+  "visit_notes": [
+    {
+      "date": "2026-02-11",
+      "author": "Dr. Lindqvist",
+      "specialty": "Pulmonology",
+      "note": "76F with moderate COPD, stable. Baseline SpO2 93-95% on room air. Continue maintenance inhaler. Pulmonary rehab encouraged."
+    }
+  ],
+  "record_completeness": "complete"
+}

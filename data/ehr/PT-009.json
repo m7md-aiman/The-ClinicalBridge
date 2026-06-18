@@ -1,0 +1,65 @@
+{
+  "patient_id": "PT-009",
+  "name": "Frank Mueller",
+  "date_of_birth": "1955-06-30",
+  "age": 70,
+  "sex": "male",
+  "mrn": "MRN-009",
+  "problem_list": [
+    {
+      "condition": "Coronary artery disease, status post MI",
+      "icd10": "I25.2",
+      "status": "active",
+      "onset_date": "2023-12-02"
+    },
+    {
+      "condition": "Hyperlipidemia",
+      "icd10": "E78.5",
+      "status": "active",
+      "onset_date": "2012-01-01"
+    }
+  ],
+  "medications": [
+    {
+      "name": "Aspirin",
+      "dose": "81 mg",
+      "frequency": "once daily",
+      "started": "2023-12-02",
+      "status": "active"
+    },
+    {
+      "name": "Atorvastatin",
+      "dose": "80 mg",
+      "frequency": "once daily",
+      "started": "2023-12-02",
+      "status": "active"
+    },
+    {
+      "name": "Metoprolol succinate",
+      "dose": "100 mg",
+      "frequency": "once daily",
+      "started": "2023-12-02",
+      "status": "active"
+    }
+  ],
+  "allergies": [],
+  "lab_results": [
+    {
+      "test": "LDL cholesterol",
+      "value": "62",
+      "unit": "mg/dL",
+      "reference_range": "<70 (high risk)",
+      "date": "2026-03-20",
+      "flag": "normal"
+    }
+  ],
+  "visit_notes": [
+    {
+      "date": "2026-03-20",
+      "author": "Dr. Okafor",
+      "specialty": "Cardiology",
+      "note": "70M s/p MI 2023, on guideline-directed secondary prevention. LDL 62 at goal. Asymptomatic, good functional capacity."
+    }
+  ],
+  "record_completeness": "complete"
+}

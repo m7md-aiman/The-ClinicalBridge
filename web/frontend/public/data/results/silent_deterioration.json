@@ -1,0 +1,400 @@
+{
+  "scenario": {
+    "id": "silent_deterioration",
+    "title": "The Silent Deterioration",
+    "lesson": "A heart-failure patient's weight rises gradually over two weeks; each reading is within threshold, but the trend plus reported ankle swelling suggests fluid retention.",
+    "expected_urgency": "Urgent",
+    "patient_id": "PT-003",
+    "alert": {
+      "alert_id": "ALERT-PT-003",
+      "patient_id": "PT-003",
+      "timestamp": "2026-06-01T08:00:00",
+      "device_type": "Withings scale",
+      "reading": {
+        "vital_type": "weight",
+        "value": 85.8,
+        "value_secondary": null,
+        "unit": "kg"
+      },
+      "device_alert_category": "WEIGHT_GAIN_TREND",
+      "baseline_value": 81.5,
+      "thresholds": {
+        "vital_type": "weight",
+        "low": 70.0,
+        "high": 88.0,
+        "unit": "kg"
+      },
+      "notes": "Gradual ~4 kg gain over 14 days; no single reading above the absolute threshold, but the upward trend triggered a trend-based alert."
+    },
+    "alert_display": "85.8 kg",
+    "alert_category": "WEIGHT_GAIN_TREND"
+  },
+  "result": {
+    "alert_id": "ALERT-PT-003",
+    "patient_id": "PT-003",
+    "final_urgency": "Urgent",
+    "escalated": false,
+    "deterministic_severity": {
+      "severity": "informational",
+      "urgency": "Informational",
+      "rationale": "weight 85.8 kg (within thresholds)."
+    },
+    "errors": [],
+    "triage": {
+      "patient_id": "PT-003",
+      "urgency": "Routine",
+      "clinical_question": "What factors may be contributing to this patient's gradual weight gain trend over the past 14 days?",
+      "reasoning": "The weight gain is gradual and does not exceed the absolute threshold, indicating it is mildly abnormal and can be reviewed in the normal workflow; no acute concerns are noted.",
+      "requires_immediate_escalation": false,
+      "ehr_query": {
+        "focus_terms": [
+          "weight management",
+          "recent weight measurements",
+          "dietary habits"
+        ],
+        "rationale": "These terms are relevant to understanding the patient's weight gain trend and potential contributing factors."
+      },
+      "anamnesis_query": {
+        "focus_terms": [
+          "recent lifestyle changes",
+          "dietary adherence",
+          "exercise habits"
+        ],
+        "rationale": "These topics will help gather information on the patient's self-reported factors that may be influencing their weight gain."
+      }
+    },
+    "ehr_context": {
+      "patient_id": "PT-003",
+      "problem_list": [
+        {
+          "condition": "Essential hypertension",
+          "icd10_code": "I10",
+          "status": "active",
+          "onset_date": "2014-02-01",
+          "source_ref": "EHR:PT-003/problem_list"
+        }
+      ],
+      "medications": [
+        {
+          "name": "Sacubitril-valsartan",
+          "dose": "49-51 mg",
+          "frequency": "twice daily",
+          "status": "active",
+          "source_ref": "EHR:PT-003/medications"
+        }
+      ],
+      "lab_results": [
+        {
+          "test_name": "Creatinine",
+          "value": "1.3 mg/dL",
+          "unit": null,
+          "reference_range": "0.7-1.3",
+          "date": "2026-04-02",
+          "trend": null,
+          "flag": "normal",
+          "source_ref": "EHR:PT-003/labs"
+        }
+      ],
+      "visit_notes": [
+        {
+          "date": "2026-04-02",
+          "excerpt": "Patient Walter Brennan (PT-003, 72M). Visit note (2026-04-02, Cardiology, Dr. Okafor): 72M with HFrEF (EF 35%), AF on rate control. Euvolemic today, dry weight 81.5 kg. Educated on daily weights; instructed to report >2 kg gain in 3 days or increasing edema. Continue GDMT.",
+          "source_ref": "EHR:PT-003/visit_note(2026-04-02)"
+        }
+      ],
+      "retrieval_confidence": 0.7,
+      "missing_data_flags": [
+        "No recent weight measurements over the past 14 days provided.",
+        "No dietary habits or changes noted in the excerpts."
+      ],
+      "source_documents": [
+        "EHR:PT-003/visit_note(2026-04-02)",
+        "EHR:PT-003/labs",
+        "EHR:PT-003/medications",
+        "EHR:PT-003/problem_list"
+      ]
+    },
+    "anamnesis_summary": {
+      "patient_id": "PT-003",
+      "reported_symptoms": [
+        {
+          "symptom": "bilateral ankle swelling",
+          "onset": "over the past 10-14 days",
+          "progression": "worse in the evening",
+          "patient_words": "my ankles look 'puffy' by evening",
+          "clinical_interpretation": "bilateral lower extremity edema, possibly related to fluid retention",
+          "source_ref": "Anamnesis:PT-003/hpi"
+        },
+        {
+          "symptom": "exertional dyspnea",
+          "onset": "over the past 10-14 days",
+          "progression": "new two-pillow orthopnea",
+          "patient_words": "feels 'a little winded' lying flat",
+          "clinical_interpretation": "orthopnea, indicating possible heart failure or fluid overload",
+          "source_ref": "Anamnesis:PT-003/hpi"
+        },
+        {
+          "symptom": "fatigue",
+          "onset": "over the past 10-14 days",
+          "progression": "feels more fatigued than usual",
+          "patient_words": "Feels more fatigued than usual",
+          "clinical_interpretation": "increased fatigue, possibly related to fluid retention or heart failure",
+          "source_ref": "Anamnesis:PT-003/ros"
+        }
+      ],
+      "medication_adherence": "adherent",
+      "adherence_detail": "Takes furosemide, carvedilol, and sacubitril-valsartan as prescribed.",
+      "lifestyle_factors": [
+        "takeout/Chinese food twice this week (salty)",
+        "limited exercise due to fatigue"
+      ],
+      "family_history": [
+        "Father: MI at 65"
+      ],
+      "patient_concerns": [
+        "Thinks it might just be the hot weather.",
+        "Does not want to go to the hospital."
+      ],
+      "sensitive_flags": [],
+      "missing_data_flags": [],
+      "source_documents": [
+        "anamnesis/PT-003"
+      ]
+    },
+    "brief": {
+      "patient_id": "PT-003",
+      "generated_at": "2026-06-17T12:14:39.508066",
+      "alert_summary": "The patient has experienced a gradual weight gain of 4 kg over the past 14 days, rising from a baseline of 81.5 kg to 85.8 kg, which triggered a trend-based alert. This trend is concerning given the patient's history of heart failure and fluid retention symptoms.",
+      "urgency": "Urgent",
+      "patient_snapshot": "Walter Brennan, 72M, has essential hypertension and heart failure with reduced ejection fraction (HFrEF, EF 35%). He is currently on sacubitril-valsartan, furosemide, and carvedilol.",
+      "contextual_analysis": [
+        {
+          "statement": "The patient's weight gain correlates with reported bilateral ankle swelling and exertional dyspnea, suggesting possible fluid retention or worsening heart failure.",
+          "sources": [
+            "Anamnesis:PT-003/hpi",
+            "RPM alert"
+          ]
+        },
+        {
+          "statement": "The patient has a recent history of consuming salty takeout food, which may contribute to fluid retention and weight gain.",
+          "sources": [
+            "Anamnesis:PT-003/ros"
+          ]
+        },
+        {
+          "statement": "Despite being adherent to medications, the patient's fatigue and limited exercise may exacerbate fluid retention and contribute to weight gain.",
+          "sources": [
+            "Anamnesis:PT-003/ros"
+          ]
+        }
+      ],
+      "risk_assessment": [
+        {
+          "statement": "The gradual weight gain, along with symptoms of edema and dyspnea, raises concern for potential heart failure exacerbation, which could lead to serious complications if not addressed.",
+          "sources": [
+            "EHR:PT-003/visit_note(2026-04-02)"
+          ]
+        },
+        {
+          "statement": "Fluid retention may be reversible with adjustments in diuretics or dietary modifications, but ongoing monitoring is essential to prevent decompensation.",
+          "sources": [
+            "EHR:PT-003/medications"
+          ]
+        }
+      ],
+      "recommended_actions": [
+        {
+          "action": "Consider evaluating the patient's diuretic regimen and dietary habits, particularly sodium intake, to manage fluid retention.",
+          "confidence": "Moderate",
+          "supporting_evidence": [
+            "Anamnesis:PT-003/hpi",
+            "Anamnesis:PT-003/ros"
+          ]
+        },
+        {
+          "action": "Schedule a follow-up appointment to reassess weight, edema, and dyspnea, and to ensure the patient is educated on recognizing worsening symptoms.",
+          "confidence": "High",
+          "supporting_evidence": [
+            "EHR:PT-003/visit_note(2026-04-02)"
+          ]
+        }
+      ],
+      "uncertainties_and_gaps": [
+        "No recent weight measurements over the past 14 days provided in the EHR.",
+        "Lack of detailed dietary habits or changes noted in the EHR."
+      ],
+      "overall_confidence": "Moderate",
+      "cited_sources": [
+        "Anamnesis:PT-003/hpi",
+        "Anamnesis:PT-003/ros",
+        "EHR:PT-003/visit_note(2026-04-02)",
+        "EHR:PT-003/medications",
+        "RPM alert",
+        "RPM trend"
+      ]
+    },
+    "session": {
+      "alert_id": "ALERT-PT-003",
+      "patient_id": "PT-003",
+      "created_at": "2026-06-17T12:14:12",
+      "events": [
+        {
+          "ts": "2026-06-17T12:14:12",
+          "step": "alert_received",
+          "summary": "weight=85.8 kg (WEIGHT_GAIN_TREND)",
+          "data": {}
+        },
+        {
+          "ts": "2026-06-17T12:14:12",
+          "step": "trend_guardrail",
+          "summary": "worsening trend raised severity floor to Urgent",
+          "data": {}
+        },
+        {
+          "ts": "2026-06-17T12:14:12",
+          "step": "severity_floor",
+          "summary": "rule severity=informational, effective floor=Urgent",
+          "data": {
+            "severity": "informational",
+            "urgency": "Informational",
+            "rationale": "weight 85.8 kg (within thresholds)."
+          }
+        },
+        {
+          "ts": "2026-06-17T12:14:15",
+          "step": "triage",
+          "summary": "urgency=Routine: What factors may be contributing to this patient's gradual weight gain trend over the past 14 days?",
+          "data": {
+            "urgency": "Routine"
+          }
+        },
+        {
+          "ts": "2026-06-17T12:14:27",
+          "step": "ehr_retrieval",
+          "summary": "1 problems, 1 meds, 1 labs (confidence 0.7)",
+          "data": {}
+        },
+        {
+          "ts": "2026-06-17T12:14:27",
+          "step": "anamnesis",
+          "summary": "adherence=adherent, 3 symptoms",
+          "data": {}
+        },
+        {
+          "ts": "2026-06-17T12:14:39",
+          "step": "synthesis",
+          "summary": "Clinical Context Brief produced.",
+          "data": {}
+        },
+        {
+          "ts": "2026-06-17T12:14:39",
+          "step": "complete",
+          "summary": "final_urgency=Urgent, escalated=False",
+          "data": {}
+        }
+      ]
+    }
+  },
+  "score": {
+    "final_urgency": "Urgent",
+    "acceptable_urgencies": [
+      "Urgent",
+      "Critical"
+    ],
+    "urgency_ok": true,
+    "must_include_coverage": 1.0,
+    "must_include_missing": [],
+    "must_flag_coverage": 0.0,
+    "must_flag_missing": [
+      "lab|electrolyte|renal|kidney"
+    ],
+    "must_avoid_violations": [],
+    "citation_coverage": 1.0,
+    "citations_cited": 5,
+    "citations_total": 5,
+    "hallucinated_citations": [],
+    "hallucination_count": 0,
+    "latency_seconds": null,
+    "errors": 0,
+    "passed": true
+  },
+  "gold_brief": {
+    "patient_id": "PT-003",
+    "generated_at": "2026-06-01T08:00:00",
+    "alert_summary": "Body weight has risen to 85.8 kg \u2014 roughly a 4 kg gain over two weeks. No single reading crossed the 88 kg threshold, but the steady upward trend triggered a trend-based alert. Classified Urgent.",
+    "urgency": "Urgent",
+    "patient_snapshot": "72-year-old man with HFrEF (EF 35%), hypertension, and atrial fibrillation on furosemide, carvedilol, and sacubitril-valsartan; documented dry weight 81.5 kg.",
+    "contextual_analysis": [
+      {
+        "statement": "The steady ~4 kg gain over 14 days is consistent with fluid retention rather than true weight gain.",
+        "sources": [
+          "RPM alert",
+          "EHR:PT-003/visit_note"
+        ]
+      },
+      {
+        "statement": "This is corroborated by new patient-reported bilateral ankle swelling and two-pillow orthopnea over the same period.",
+        "sources": [
+          "Anamnesis:PT-003/hpi",
+          "Anamnesis:PT-003/ros",
+          "Anamnesis:PT-003/diary"
+        ]
+      },
+      {
+        "statement": "The patient reports full medication adherence; recent salty takeout meals may have contributed.",
+        "sources": [
+          "Anamnesis:PT-003/adherence",
+          "Anamnesis:PT-003/social"
+        ]
+      }
+    ],
+    "risk_assessment": [
+      {
+        "statement": "These findings suggest early decompensated heart failure; without intervention this risks progression and hospitalization.",
+        "sources": [
+          "EHR:PT-003/problem_list",
+          "EHR:PT-003/labs"
+        ]
+      }
+    ],
+    "recommended_actions": [
+      {
+        "action": "Contact the patient today to assess volume status and consider a temporary furosemide (diuretic) increase per his heart-failure action plan.",
+        "confidence": "High",
+        "supporting_evidence": [
+          "RPM alert",
+          "Anamnesis:PT-003/ros"
+        ]
+      },
+      {
+        "action": "Counsel on dietary sodium restriction.",
+        "confidence": "Moderate",
+        "supporting_evidence": [
+          "Anamnesis:PT-003/social"
+        ]
+      },
+      {
+        "action": "Arrange near-term review with repeat weight, symptom check, and labs (renal function, electrolytes, NT-proBNP).",
+        "confidence": "Moderate",
+        "supporting_evidence": [
+          "EHR:PT-003/labs"
+        ]
+      }
+    ],
+    "uncertainties_and_gaps": [
+      "No labs since April 2026; current renal function and electrolytes are unknown before adjusting diuretics."
+    ],
+    "overall_confidence": "High",
+    "cited_sources": [
+      "RPM alert",
+      "EHR:PT-003/problem_list",
+      "EHR:PT-003/labs",
+      "EHR:PT-003/visit_note",
+      "Anamnesis:PT-003/hpi",
+      "Anamnesis:PT-003/ros",
+      "Anamnesis:PT-003/social"
+    ]
+  },
+  "gold_brief_markdown": "# Clinical Context Brief \u2014 Patient PT-003\n_Generated 2026-06-01 08:00 \u00b7 Urgency: **Urgent** \u00b7 Overall confidence: **High**_\n\n## 1. Alert Summary\nBody weight has risen to 85.8 kg \u2014 roughly a 4 kg gain over two weeks. No single reading crossed the 88 kg threshold, but the steady upward trend triggered a trend-based alert. Classified Urgent.\n\n## 2. Patient Snapshot\n72-year-old man with HFrEF (EF 35%), hypertension, and atrial fibrillation on furosemide, carvedilol, and sacubitril-valsartan; documented dry weight 81.5 kg.\n\n## 3. Contextual Analysis\n- The steady ~4 kg gain over 14 days is consistent with fluid retention rather than true weight gain.  \n  _sources: RPM alert, EHR:PT-003/visit_note_\n- This is corroborated by new patient-reported bilateral ankle swelling and two-pillow orthopnea over the same period.  \n  _sources: Anamnesis:PT-003/hpi, Anamnesis:PT-003/ros, Anamnesis:PT-003/diary_\n- The patient reports full medication adherence; recent salty takeout meals may have contributed.  \n  _sources: Anamnesis:PT-003/adherence, Anamnesis:PT-003/social_\n\n## 4. Risk Assessment\n- These findings suggest early decompensated heart failure; without intervention this risks progression and hospitalization.  \n  _sources: EHR:PT-003/problem_list, EHR:PT-003/labs_\n\n## 5. Recommended Actions\n- [High] Contact the patient today to assess volume status and consider a temporary furosemide (diuretic) increase per his heart-failure action plan. _(evidence: RPM alert, Anamnesis:PT-003/ros)_\n- [Moderate] Counsel on dietary sodium restriction. _(evidence: Anamnesis:PT-003/social)_\n- [Moderate] Arrange near-term review with repeat weight, symptom check, and labs (renal function, electrolytes, NT-proBNP). _(evidence: EHR:PT-003/labs)_\n\n## 6. Uncertainties & Gaps\n- No labs since April 2026; current renal function and electrolytes are unknown before adjusting diuretics.\n\n_Sources consulted: RPM alert, EHR:PT-003/problem_list, EHR:PT-003/labs, EHR:PT-003/visit_note, Anamnesis:PT-003/hpi, Anamnesis:PT-003/ros, Anamnesis:PT-003/social_",
+  "cached": true
+}

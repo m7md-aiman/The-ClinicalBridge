@@ -1,0 +1,32 @@
+==============================================================================
+ClinicalBridge — Evaluation Report
+==============================================================================
+
+scenario              final        expected     urg  incl  cite  hall pass
+------------------------------------------------------------------------------
+missed_medication     Urgent       Urgent       OK   0.667 1.0   0    PASS
+false_alarm           Routine      Routine      OK   0.667 1.0   0    PASS
+silent_deterioration  Urgent       Urgent       OK   1.0   1.0   0    PASS
+incomplete_record     Urgent       Routine      OK   0.667 1.0   0    PASS
+conflicting_data      Urgent       Urgent       OK   0.667 1.0   0    PASS
+------------------------------------------------------------------------------
+
+AGGREGATE
+----------------------------------------
+  scenarios                        5
+  pass_rate                        1.0
+  urgency_accuracy                 1.0
+  mean_must_include_coverage       0.734
+  mean_citation_coverage           1.0
+  total_hallucinated_citations     0
+  total_must_avoid_violations      0
+  mean_latency_seconds             26.95
+  total_errors                     0
+==============================================================================
+
+NOTES (per-scenario gaps):
+  - missed_medication: missing terms ['stopped|discontinu|self-discontinu|non-adher']
+  - false_alarm: missing terms ['single|isolated|one reading|one-off']
+  - incomplete_record: missing terms ['restart|resume|reinitiat|re-establish|reestablish']
+  - conflicting_data: missing terms ['salad|vitamin k|leafy green|kale|spinach']
+==============================================================================
