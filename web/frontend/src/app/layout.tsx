@@ -31,6 +31,9 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
                 A capstone proof-of-concept (COP-3442 Prompt Engineering). All patient data is
                 fully simulated. Not a medical device; for demonstration only.
               </p>
+              <p className="mt-2">
+                Team: Masa Bokhary · Mohamed Alkhozendar · Abdullah Salamoun · Mohamed Allabani
+              </p>
             </div>
           </footer>
         </ThemeProvider>

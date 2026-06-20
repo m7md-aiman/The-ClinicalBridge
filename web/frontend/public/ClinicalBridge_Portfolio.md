@@ -5,6 +5,8 @@ and anamnesis data into a cited Clinical Context Brief.**
 
 *COP-3442 Prompt Engineering · Capstone · All patient data is fully simulated · Not a medical device.*
 
+**Team:** Masa Bokhary · Mohamed Alkhozendar · Abdullah Salamoun · Mohamed Allabani  
+**Course:** COP-3442 — Prompt Engineering · Bahçeşehir University, Artificial Intelligence Engineering Department  
 **Repository:** https://github.com/m7md-aiman/The-ClinicalBridge
 
 > This single document is the comprehensive portfolio: it consolidates every design decision, prompt

@@ -44,6 +44,9 @@ web/_shot_*.png
 web/_uvicorn.log
 # NOTE: web/backend/data/*.json (cache) IS committed so the site runs without an API key.
 
+# --- Generated submission document (build via scripts/build_docx.py) ---
+/ClinicalBridge_Portfolio.docx
+
 # --- OS / editor ---
 .DS_Store
 Thumbs.db

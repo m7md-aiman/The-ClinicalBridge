@@ -87,6 +87,9 @@ export default function PortfolioPage() {
           Every design decision, prompt iteration, evaluation result, and lesson learned — from the
           ClinicalBridge multi-agent clinical decision-support system.
         </p>
+        <p className="mt-3 text-sm font-medium text-foreground/80">
+          By Masa Bokhary · Mohamed Alkhozendar · Abdullah Salamoun · Mohamed Allabani
+        </p>
         <div className="mt-6 flex flex-wrap gap-3">
           <a
             href="/ClinicalBridge_Portfolio.md"
