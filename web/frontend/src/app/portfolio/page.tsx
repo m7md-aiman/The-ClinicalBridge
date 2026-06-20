@@ -1,14 +1,14 @@
 "use client";
 
-import {
-  AlertTriangle,
-  Clock,
-  Download,
-  FileText,
-  Quote,
-  ShieldCheck,
-  Target,
-} from "lucide-react";
+import { AlertTriangle, Clock, Download, Quote, ShieldCheck, Target } from "lucide-react";
+
+function GithubMark({ className }: { className?: string }) {
+  return (
+    <svg viewBox="0 0 24 24" className={className} fill="currentColor" aria-hidden="true">
+      <path d="M12 .5C5.7.5.5 5.7.5 12a11.5 11.5 0 0 0 7.9 10.9c.6.1.8-.2.8-.5v-1.7c-3.2.7-3.9-1.5-3.9-1.5-.5-1.3-1.3-1.7-1.3-1.7-1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1 1.8 2.8 1.3 3.5 1 .1-.8.4-1.3.7-1.6-2.6-.3-5.3-1.3-5.3-5.7 0-1.3.5-2.3 1.2-3.1-.1-.3-.5-1.5.1-3.1 0 0 1-.3 3.3 1.2a11.5 11.5 0 0 1 6 0C17 4.7 18 5 18 5c.6 1.6.2 2.8.1 3.1.8.8 1.2 1.8 1.2 3.1 0 4.4-2.7 5.4-5.3 5.7.4.4.8 1.1.8 2.2v3.3c0 .3.2.6.8.5A11.5 11.5 0 0 0 23.5 12C23.5 5.7 18.3.5 12 .5z" />
+    </svg>
+  );
+}
 import * as React from "react";
 import { getEvaluation } from "@/lib/api";
 import type { EvaluationReport, ProgressionStage } from "@/lib/types";
@@ -96,10 +96,12 @@ export default function PortfolioPage() {
             <Download className="h-4 w-4" /> Download full portfolio (Markdown)
           </a>
           <a
-            href="https://github.com"
+            href="https://github.com/m7md-aiman/The-ClinicalBridge"
+            target="_blank"
+            rel="noopener noreferrer"
             className="inline-flex items-center gap-2 rounded-xl border px-4 py-2.5 text-sm font-medium hover:bg-muted"
           >
-            <FileText className="h-4 w-4" /> Source: docs/ + src/clinicalbridge/
+            <GithubMark className="h-4 w-4" /> View source on GitHub
           </a>
         </div>
       </Reveal>

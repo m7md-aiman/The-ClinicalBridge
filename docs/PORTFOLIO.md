@@ -5,6 +5,8 @@ and anamnesis data into a cited Clinical Context Brief.**
 
 *COP-3442 Prompt Engineering · Capstone · All patient data is fully simulated · Not a medical device.*
 
+**Repository:** https://github.com/m7md-aiman/The-ClinicalBridge
+
 > This single document is the comprehensive portfolio: it consolidates every design decision, prompt
 > iteration, evaluation result, and lesson learned. The per-module deep-dives live alongside it in
 > [`docs/`](.) and are linked throughout; the full source is under [`src/clinicalbridge/`](../src/clinicalbridge/).
